@@ -1,0 +1,17 @@
+.toggler {
+  padding: 0.5rem;
+}
+
+.toggler:hover,
+.toggler:focus {
+  opacity: 0.8;
+}
+
+.toggler:active {
+  opacity: 0.75;
+}
+
+.toggler > svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}

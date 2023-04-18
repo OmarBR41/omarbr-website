@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+  padding: 3rem 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--violet-dark);
+}
+
+.textContainer {
+  display: flex;
+  max-width: 480px;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--secondary);
+  text-align: center;
+}
+
+.headline {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.text {
+  font-weight: 100;
+}

@@ -1,0 +1,25 @@
+.menuButton {
+  padding: 0.5rem;
+  z-index: 9999;
+}
+
+.toggler:hover,
+.toggler:focus {
+  opacity: 0.8;
+}
+
+.toggler:active {
+  opacity: 0.5;
+}
+
+.menuButton > svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+}

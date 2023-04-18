@@ -1,0 +1,17 @@
+{
+  "title": "Software Engineer | Omar BR",
+  "titleTemplate": "%s | Omar BR",
+  "description": "Software engineer with over 6 years of experience in web and mobile development, mainly with ReactJS, JavaScript, TypeScript, React Native, NodeJS, GraphQL, HTML5, CSS3, MaterialUI; with strong background in Design, UI/UX, Marketing, SEO, Monetization, E-Commerces, E-Learning, and more! Contact me if you want to chat or work with me!",
+  "openGraph": {
+    "title": "Software Engineer | Omar BR",
+    "description": "Software engineer with over 6 years of experience in web and mobile development, mainly with ReactJS, JavaScript, TypeScript, React Native, NodeJS, GraphQL, HTML5, CSS3, MaterialUI; with strong background in Design, UI/UX, Marketing, SEO, Monetization, E-Commerces, E-Learning, and more! Contact me if you want to chat or work with me!",
+    "type": "website",
+    "locale": "en_US",
+    "url": "https://omarbr.com",
+    "site_name": "Omar BR",
+    "images": [{}]
+  },
+  "twitter": {
+    "cardType": "summary_large_image"
+  }
+}

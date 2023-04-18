@@ -1,0 +1,108 @@
+@import './colors.css';
+
+/* Globals */
+:root {
+  /*  --- Layout --- */
+  --font-size: 16px;
+  --border-radius: 8px;
+  --icon-size: 1.25rem;
+
+  /* --- Misc --- */
+  --box-shadow: 0.5rem 0.5rem 0.5rem -0.25rem hsla(0, 0%, 0%, 0.1);
+  --backdrop-filter: saturate(180%) blur(5px);
+}
+
+/* Main reset [start] */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth !important;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  background-color: var(--accent-2);
+  font-size: var(--font-size);
+  font-weight: normal;
+  overscroll-behavior-x: none;
+}
+
+body {
+  position: relative;
+  max-width: 100vw;
+  margin: 0;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Main reset [start] */
+
+/* Buttons reset [start] */
+button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transform: none;
+}
+
+button:hover,
+button:focus {
+  background: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: none;
+}
+/* Button reset [end] */
+
+/* Image/SVGs reset [start] */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  width: 100%;
+  color: inherit;
+  fill: inherit;
+}
+/* Image/SVGs reset [end] */
