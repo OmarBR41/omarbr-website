@@ -1,7 +1,19 @@
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { ErrorLayout } from '@/modules/layout';
 
-const NotFound = () => (
-  <ErrorLayout text="The requested page doesn't exist or you don't have access to it." title="404 - Not Found" />
-);
+const Custom404 = () => {
+  const { t } = useTranslation('common');
+  return <ErrorLayout text={t('errors.404.message')} title={t('errors.404.title')} />;
+};
 
-export default NotFound;
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+}
+
+export default Custom404;

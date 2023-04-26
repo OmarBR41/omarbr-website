@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
-
 import { useEffect } from 'react';
 
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import { Roboto_Mono as RobotoMono } from 'next/font/google';
 import { useRouter } from 'next/router';
 
+import { appWithTranslation } from 'next-i18next';
 import { ThemeProvider } from 'next-themes';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -70,4 +70,4 @@ export function reportWebVitals({ id, name, label, value }: NextWebVitalsMetric)
   });
 }
 
-export default App;
+export default appWithTranslation(App);

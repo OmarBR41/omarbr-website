@@ -17,9 +17,9 @@ const Nav = ({ isNavOpen }: NavProps) => {
   const lastIdx = navData.length - 1;
 
   const renderNavLinks = () =>
-    navData.map(({ id, text, href, icon }, idx) => (
+    navData.map(({ id, label, href, icon }, idx) => (
       <Fragment key={id}>
-        <NavLink href={href} icon={icon} text={text} />
+        <NavLink href={href} icon={icon} label={label} />
         {idx < lastIdx && <span className={styles.separator} />}
       </Fragment>
     ));

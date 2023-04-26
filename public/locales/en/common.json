@@ -1,0 +1,14 @@
+{
+  "title": "Software Engineer",
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "errors": {
+    "404": { "title": "404 - Page Not Found", "message": "The requested page doesn't exist, please verify the URL." },
+    "500": {
+      "title": "500 - Server-side error",
+      "message": "An error ocurred on the server. Please try again later."
+    }
+  }
+}

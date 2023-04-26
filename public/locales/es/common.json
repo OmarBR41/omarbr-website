@@ -1,0 +1,17 @@
+{
+  "title": "Ingeniero de Software",
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí"
+  },
+  "errors": {
+    "404": {
+      "title": "404 - Página No Encontrada",
+      "message": "La página solicitada no existe, por favor verifique la URL."
+    },
+    "500": {
+      "title": "500 - Error en el Servidor",
+      "message": "Ha ocurrido un error en el servidor, intente más tarde."
+    }
+  }
+}
