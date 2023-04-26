@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  width: 1.5rem;
+  height: 1.25rem;
+  border-radius: 2px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 2rem;
+    height: 1.5rem;
+  }
+}

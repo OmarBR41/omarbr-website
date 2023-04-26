@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { LanguageSwitcher } from '../LanguageSwitcher';
+
 import styles from './Footer.module.css';
 
 export const Footer: React.FC = () => (
@@ -8,5 +10,6 @@ export const Footer: React.FC = () => (
       <p>Footer1</p>
       <p>Footer2</p>
     </nav>
+    <LanguageSwitcher />
   </footer>
 );
