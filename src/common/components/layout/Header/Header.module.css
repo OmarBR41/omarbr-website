@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  max-height: var(--header-offset);
   padding: 1.25rem 1rem;
   display: flex;
   align-items: center;

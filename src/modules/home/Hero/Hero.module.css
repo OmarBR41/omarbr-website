@@ -2,8 +2,9 @@
   position: relative;
   display: flex;
   width: 100%;
-  min-height: 400px;
-  padding: 3rem 1rem;
+  min-height: 640px;
+  padding: 6rem 2rem 2rem;
+  margin-top: var(--header-offset-neg);
   align-items: center;
   justify-content: center;
   background-color: var(--violet-dark);

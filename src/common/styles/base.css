@@ -6,6 +6,9 @@
   --font-size: 16px;
   --border-radius: 8px;
   --icon-size: 1.25rem;
+  /* Header */
+  --header-offset: 80px;
+  --header-offset-neg: calc(var(--header-offset) * -1);
 
   /* --- Misc --- */
   --box-shadow: 0.5rem 0.5rem 0.5rem -0.25rem hsla(0, 0%, 0%, 0.1);
