@@ -28,10 +28,11 @@ export const Header: React.FC = () => {
 
   return (
     <header className={styles.container} ref={ref}>
-      <MenuButton isNavOpen={isNavOpen} onClick={toggleNav} />
-      <Logo />
-      <Nav isNavOpen={isNavOpen} />
-      <ThemeToggler />
+      <div className={styles.wrapper}>
+        <MenuButton isNavOpen={isNavOpen} onClick={toggleNav} />
+        <Logo />
+        <Nav isNavOpen={isNavOpen} />
+      </div>
     </header>
   );
 };

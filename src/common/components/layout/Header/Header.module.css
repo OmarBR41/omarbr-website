@@ -5,13 +5,20 @@
   left: 0;
   width: 100%;
   max-height: var(--header-offset);
-  padding: 1.25rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   color: var(--text-primary);
   background-color: var(--header-background);
   -webkit-backdrop-filter: var(--backdrop-filter);
   backdrop-filter: var(--backdrop-filter);
   z-index: 1000;
 }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
