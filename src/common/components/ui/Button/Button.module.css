@@ -3,6 +3,7 @@
 .container {
   width: auto;
   padding: 0.75rem 1.25rem;
+  color: var(--secondary);
   border: 1px solid;
   border-radius: var(--border-radius);
   cursor: pointer;
