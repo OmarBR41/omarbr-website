@@ -1,13 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+import { useTranslation } from 'next-i18next';
+
 import { MenuButton, Nav, ThemeToggler } from '@/components/nav';
-import { Logo } from '@/components/ui';
+import { Button, Logo } from '@/components/ui';
 import { MD_SIZE } from '@/constants/screenBreakpoints';
 import { useOnClickOutside, useWindowSize } from '@/lib/hooks';
 
 import styles from './Header.module.css';
 
 export const Header: React.FC = () => {
+  const { t } = useTranslation('common');
   const ref = useRef(null);
 
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -32,6 +35,13 @@ export const Header: React.FC = () => {
         <MenuButton isNavOpen={isNavOpen} onClick={toggleNav} />
         <Logo />
         <Nav isNavOpen={isNavOpen} />
+
+        <div className={styles.rightGroup}>
+          <ThemeToggler />
+          <Button extraClassNames={styles.cta} href="/contact-me">
+            {t('nav.contact')}
+          </Button>
+        </div>
       </div>
     </header>
   );

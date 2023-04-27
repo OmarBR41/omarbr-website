@@ -27,14 +27,17 @@
   border-bottom: 2px solid var(--text-color);
 }
 
+.cta {
+  position: absolute;
+  bottom: 2rem;
+}
 
 @media (min-width: 1024px) {
   .container {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 50%;
     right: unset;
-    width: 100%;
     height: 100%;
     max-width: none;
     height: auto;
@@ -44,7 +47,7 @@
     justify-content: center;
     background: none;
     box-shadow: none;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     transition: none;
   }
 
@@ -54,5 +57,9 @@
 
   .separator::before {
     content: '•';
+  }
+
+  .cta {
+    display: none;
   }
 }

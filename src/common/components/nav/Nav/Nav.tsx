@@ -1,7 +1,9 @@
 import { Fragment } from 'react';
 
 import classNames from 'classnames';
+import { useTranslation } from 'next-i18next';
 
+import { Button } from '@/components/ui';
 import { navData } from '@/constants/navData';
 
 import { NavLink } from '../NavLink';
@@ -13,6 +15,7 @@ interface NavProps {
 }
 
 const Nav = ({ isNavOpen }: NavProps) => {
+  const { t } = useTranslation('common');
   const navClasses = classNames(styles.container, { [styles.containerShown]: isNavOpen });
   const lastIdx = navData.length - 1;
 
@@ -24,7 +27,15 @@ const Nav = ({ isNavOpen }: NavProps) => {
       </Fragment>
     ));
 
-  return <nav className={navClasses}>{renderNavLinks()}</nav>;
+  return (
+    <nav className={navClasses}>
+      {renderNavLinks()}
+
+      <Button extraClassNames={styles.cta} href="/contact-me" type="primary">
+        {t('nav.contact')}
+      </Button>
+    </nav>
+  );
 };
 
 export { Nav };
