@@ -10,18 +10,29 @@ import styles from './Button.module.css';
 type ButtonType = 'primary' | 'secondary';
 
 interface ButtonProps {
+  type: ButtonType;
   children?: any;
+  extraClassNames?: string | string[];
   href?: Url;
   isTargetExternal?: boolean;
   onClick?: () => {};
-  type: ButtonType;
 }
 
-export const Button = ({ children, href, isTargetExternal, onClick, type }: ButtonProps) => {
-  const buttonClassNames = classNames(styles.container, {
-    [styles.btnPrimary]: type === 'primary',
-    [styles.btnSecondary]: type === 'secondary',
-  });
+export const Button = ({ children, extraClassNames, href, isTargetExternal, onClick, type }: ButtonProps) => {
+  const buttonClassNames = classNames(
+    styles.container,
+    {
+      [styles.btnPrimary]: type === 'primary',
+      [styles.btnSecondary]: type === 'secondary',
+    },
+    // Add extraClassNames if not undefined
+    extraClassNames !== undefined && {
+      // Add it as inputted if it's a string
+      [extraClassNames as string]: typeof extraClassNames === 'string',
+      // Add all of them if they're in an array
+    },
+    Array.isArray(extraClassNames) && extraClassNames.map((cn: string) => cn)
+  );
 
   if (href !== undefined && !isTargetExternal) {
     return (
@@ -40,6 +51,7 @@ export const Button = ({ children, href, isTargetExternal, onClick, type }: Butt
 
 Button.defaultProps = {
   children: undefined,
+  extraClassNames: undefined,
   href: undefined,
   onClick: undefined,
   isTargetExternal: false,
