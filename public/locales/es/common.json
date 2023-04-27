@@ -2,7 +2,9 @@
   "title": "Ingeniero de Software",
   "nav": {
     "home": "Inicio",
-    "about": "Sobre mí"
+    "about": "Sobre mí",
+    "contact": "¡Contáctame!",
+    "projects": "Proyectos"
   },
   "errors": {
     "404": {

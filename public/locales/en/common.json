@@ -2,7 +2,9 @@
   "title": "Software Engineer",
   "nav": {
     "home": "Home",
-    "about": "About"
+    "about": "About me",
+    "contact": "Contact me!",
+    "projects": "Projects"
   },
   "errors": {
     "404": { "title": "404 - Page Not Found", "message": "The requested page doesn't exist, please verify the URL." },

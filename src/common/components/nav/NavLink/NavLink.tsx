@@ -6,17 +6,17 @@ import styles from './NavLink.module.css';
 
 interface NavLinkProps {
   href: string;
-  label: string;
   icon: JSX.Element;
+  id: string;
 }
 
-export const NavLink = ({ href, label, icon }: NavLinkProps) => {
+export const NavLink = ({ href, id, icon }: NavLinkProps) => {
   const { t } = useTranslation('common');
 
   return (
     <Link className={styles.container} href={href}>
       {icon}
-      {t(`nav.${label}`)}
+      {t(`nav.${id}`)}
     </Link>
   );
 };
