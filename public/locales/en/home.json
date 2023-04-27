@@ -3,5 +3,7 @@
   "hero": {
     "title": "Hi! I'm Omar, a Software Engineer",
     "text": "I specialize on the development and design of websites & mobile applications using modern technologies",
+    "cta-primary": "Let's chat!",
+    "cta-secondary": "Take a look at my portfolio"
   },
 }
