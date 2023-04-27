@@ -7,7 +7,7 @@
   --border-radius: 8px;
   --icon-size: 1.25rem;
   /* Header */
-  --header-offset: 80px;
+  --header-offset: 90px;
   --header-offset-neg: calc(var(--header-offset) * -1);
 
   /* --- Misc --- */
