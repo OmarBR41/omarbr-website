@@ -36,20 +36,27 @@
   --accent-8: hsl(0, 0%, 7%);
   --accent-9: hsl(0, 0%, 0%);
 
-  /* More */
-  --cyan: hsl(188, 72%, 47%);
-  --green: hsl(151, 54%, 46%);
-  --red: hsl(0, 68%, 55%);
-  --purple: hsl(305, 94%, 54%);
+  /* Blue */
   --blue: hsl(212, 100%, 48%);
+  --blue-dark: hsl(212, 100%, 35%);
+  --blue-darker: hsl(212, 100%, 25%);
+  --blue-darkest: hsl(212, 100%, 20%);
 
+  /* Pink */
   --pink: hsl(330, 100%, 50%);
   --pink-light: hsl(330, 100%, 61%);
 
   --magenta: hsl(336, 82%, 57%);
 
+  /* Violet */
   --violet: hsl(270, 67%, 47%);
   --violet-dark: hsl(262, 55%, 35%);
+
+  /* More */
+  --cyan: hsl(188, 72%, 47%);
+  --green: hsl(151, 54%, 46%);
+  --red: hsl(0, 68%, 55%);
+  --purple: hsl(305, 94%, 54%);
 }
 
 /* Dark Mode [start] */
