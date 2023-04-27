@@ -7,23 +7,28 @@
   margin-top: var(--header-offset-neg);
   align-items: center;
   justify-content: center;
-  background-color: var(--violet-dark);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
 }
 
 .textContainer {
   display: flex;
   max-width: 480px;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   color: var(--secondary);
   text-align: center;
+  z-index: 10;
 }
 
-.headline {
+.title {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 .text {
-  font-weight: 100;
+  font-weight: 300;
+}
+
 }

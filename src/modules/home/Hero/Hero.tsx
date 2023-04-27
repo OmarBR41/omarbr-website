@@ -1,14 +1,18 @@
 import React from 'react';
 
+import { useTranslation } from 'next-i18next';
 import styles from './Hero.module.css';
 
-export const Hero: React.FC = () => (
-  <div className={styles.container}>
-    <div className={styles.textContainer}>
-      <h1 className={styles.headline}>Lorem ipsum dolor sit.</h1>
-      <p className={styles.text}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-      </p>
+export const Hero: React.FC = () => {
+  const { t } = useTranslation('home');
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h1 className={styles.title}>{t('hero.title')}</h1>
+        <p className={styles.text}>{t('hero.text')}</p>
+
+      </div>
     </div>
-  </div>
-);
+  );
+};
