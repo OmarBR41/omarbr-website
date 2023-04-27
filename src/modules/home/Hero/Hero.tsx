@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useTranslation } from 'next-i18next';
 
-import { ShootingStars } from '@/components/home';
+import { ShootingStars, SkillsIcons } from '@/components/home';
 import { Button } from '@/components/ui';
 
 import styles from './Hero.module.css';
@@ -26,6 +26,8 @@ export const Hero: React.FC = () => {
             {t('hero.cta-secondary')}
           </Button>
         </div>
+
+        <SkillsIcons />
       </div>
     </div>
   );

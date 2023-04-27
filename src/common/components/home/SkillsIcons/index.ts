@@ -1,0 +1,1 @@
+export { SkillsIcons } from './SkillsIcons';

@@ -1,0 +1,25 @@
+.container {
+  --icons-per-row: 5;
+  --icon-size: 1.5rem;
+  --gap: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+  margin-top: 3rem;
+
+  max-width: calc(var(--icon-size) * var(--icons-per-row) * 2);
+}
+
+.icon {
+  position: relative;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+@media (min-width: 768px) {
+  .icon {
+    --icon-size: 2rem;
+  }
+}
