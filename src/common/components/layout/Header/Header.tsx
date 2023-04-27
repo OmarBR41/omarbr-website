@@ -9,10 +9,12 @@ import styles from './Header.module.css';
 
 export const Header: React.FC = () => {
   const ref = useRef(null);
+
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const closeNav = () => setIsNavOpen(false);
 
   const { width } = useWindowSize();
-  useOnClickOutside(ref, () => setIsNavOpen(false));
+  useOnClickOutside(ref, () => closeNav());
 
   const toggleNav = () => {
     setIsNavOpen((prevState) => !prevState);
@@ -20,7 +22,7 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     if (width && width >= MD_SIZE) {
-      setIsNavOpen(false);
+      closeNav();
     }
   }, [width]);
 
