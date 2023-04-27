@@ -1,7 +1,10 @@
 import React from 'react';
 
 import { useTranslation } from 'next-i18next';
+
+import { ShootingStars } from '@/components/home';
 import { Button } from '@/components/ui';
+
 import styles from './Hero.module.css';
 
 export const Hero: React.FC = () => {
@@ -9,6 +12,8 @@ export const Hero: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      <ShootingStars />
+
       <div className={styles.textContainer}>
         <h1 className={styles.title}>{t('hero.title')}</h1>
         <p className={styles.text}>{t('hero.text')}</p>

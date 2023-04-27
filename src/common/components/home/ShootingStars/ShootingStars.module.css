@@ -1,0 +1,14 @@
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  transform: rotateZ(30deg);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 200%;
+  transform: translateY(-15%);
+}
