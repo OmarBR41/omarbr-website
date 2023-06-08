@@ -3,10 +3,3 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-
-.errorContainer {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 1rem;
-  width: 80%;
-}

@@ -42,6 +42,10 @@
   --blue-darker: hsl(212, 100%, 25%);
   --blue-darkest: hsl(212, 100%, 20%);
 
+  /* Red */
+  --red: hsl(0, 68%, 55%);
+  --red-error: hsl(1, 83%, 63%);
+
   /* Pink */
   --pink: hsl(330, 100%, 50%);
   --pink-light: hsl(330, 100%, 61%);
@@ -52,11 +56,15 @@
   --violet: hsl(270, 67%, 47%);
   --violet-dark: hsl(262, 55%, 35%);
 
+  /* Gray */
+  --gray-light: hsl(0, 0%, 85%);
+
   /* More */
   --cyan: hsl(188, 72%, 47%);
   --green: hsl(151, 54%, 46%);
-  --red: hsl(0, 68%, 55%);
   --purple: hsl(305, 94%, 54%);
+
+  --white: hsl(0, 0%, 92%);
 }
 
 /* Dark Mode [start] */

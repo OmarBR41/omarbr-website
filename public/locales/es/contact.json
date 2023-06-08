@@ -4,15 +4,22 @@
   "form": {
     "name": {
       "label": "Nombre",
-      "placeholder": "¿Cómo puedo llamarte?"
+      "placeholder": "¿Cómo puedo llamarte?",
+      "error": "Necesito saber con quién hablaré"
     },
     "email": {
       "label": "Correo electrónico",
-      "placeholder": "¿Dónde puedo contactarte?"
+      "placeholder": "¿Dónde puedo contactarte?",
+      "error": "Ingresa un email válido"
     },
-    "message": { "label": "Mensaje", "placeholder": "¿En qué puedo ayudarte?" },
+    "message": {
+      "label": "Mensaje",
+      "placeholder": "¿En qué puedo ayudarte?",
+      "error": "También debes incluir un mensaje"
+    },
     "submit": "Enviar",
     "sending": "Enviando",
-    "thank-you": "¡Gracias por escribirme!, me pondré en contacto contigo pronto."
+    "thank-you": "¡Gracias por escribirme!, me pondré en contacto contigo pronto.",
+    "error": "Hubo un error enviando tu mensaje, por favor intenta de nuevo"
   }
 }

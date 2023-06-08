@@ -3,7 +3,7 @@ import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { Controller, ControllerRenderProps, SubmitHandler, useForm } from 'react-hook-form';
 
-import { Input, InputGroup, Label, Submit, TextArea, ThankYou } from '@/components/form';
+import { FieldError, FormError, Input, InputGroup, Label, Submit, TextArea, ThankYou } from '@/components/form';
 
 import styles from './ContactForm.module.css';
 
@@ -25,6 +25,7 @@ export const ContactForm: React.FC = () => {
 
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
+  const [errorSending, setErrorSending] = useState(false);
 
   const {
     control,
@@ -41,6 +42,7 @@ export const ContactForm: React.FC = () => {
     try {
       setIsSending(true);
       setIsSent(false);
+      setErrorSending(false);
 
       const fetchOptions = {
         method: 'POST',
@@ -59,18 +61,14 @@ export const ContactForm: React.FC = () => {
       }
 
       if (res.status === 400) {
-        console.error(res);
+        setErrorSending(true);
       }
     } catch (err: any) {
-      console.error(err);
+      // console.error(err);
+      setErrorSending(true);
     } finally {
       setIsSending(false);
     }
-  };
-
-  const getFieldError = (id: InputType) => {
-    console.log(errors[id]);
-    return undefined;
   };
 
   const renderField = (id: string, field: ControllerRenderProps<Inputs, InputType>) => {
@@ -87,9 +85,11 @@ export const ContactForm: React.FC = () => {
 
     return (fields as InputType[]).map((id) => {
       const fieldLabel = t(`form.${id}.label`);
+      const hasError = errors?.[id];
+      const fieldErrorMessage = t(`form.${id}.error`);
 
       return (
-        <InputGroup errorMessage={getFieldError(id)} key={id}>
+        <InputGroup key={id}>
           <Label id={id}>{fieldLabel}</Label>
           <Controller
             control={control}
@@ -97,6 +97,7 @@ export const ContactForm: React.FC = () => {
             render={({ field }) => renderField(id, field)}
             rules={{ required: true }}
           />
+          {hasError && <FieldError message={fieldErrorMessage} />}
         </InputGroup>
       );
     });
@@ -111,6 +112,7 @@ export const ContactForm: React.FC = () => {
       <Submit isDisabled={isSending} label={submitLabel} />
 
       {isSent && <ThankYou />}
+      {errorSending && <FormError />}
     </form>
   );
 };

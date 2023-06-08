@@ -4,15 +4,22 @@
   "form": {
     "name": {
       "label": "Name",
-      "placeholder": "How should I call you?"
+      "placeholder": "How should I call you?",
+      "error": "I need to know who I'm gonna talk with"
     },
     "email": {
       "label": "Email",
-      "placeholder": "Where can I reach you?"
+      "placeholder": "Where can I reach you?",
+      "error": "Provide a valid email address"
     },
-    "message": { "label": "Message", "placeholder": "How can I help you?" },
+    "message": {
+      "label": "Message",
+      "placeholder": "How can I help you?",
+      "error": "You also need to include a message"
+    },
     "submit": "Send",
     "sending": "Sending",
-    "thank-you": "Thanks for writing in! I'll get in touch with you soon."
+    "thank-you": "Thanks for writing in! I'll get in touch with you soon.",
+    "error": "There was an error sending your message, please try again"
   }
 }
