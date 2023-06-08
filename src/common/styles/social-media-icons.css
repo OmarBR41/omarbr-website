@@ -1,0 +1,29 @@
+:root {
+  --linkedin-color: hsl(210, 90%, 40%);
+  --linkedin-hover: hsl(210, 90%, 25%);
+
+  --github-color: hsl(0, 0%, 0%);
+  --github-hover: hsl(0, 0%, 15%);
+}
+
+[data-theme='dark'] {
+  --github-color: hsl(0, 0%, 100%);
+  --github-hover: hsl(0, 0%, 85%);
+}
+
+/* Social Media Icons */
+.fa-linkedin {
+  color: var(--linkedin-color);
+}
+
+.fa-linkedin:hover {
+  color: var(--linkedin-hover);
+}
+
+.fa-github {
+  color: var(--github-color);
+}
+
+.fa-github:hover {
+  color: var(--github-hover);
+}

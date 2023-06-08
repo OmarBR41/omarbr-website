@@ -1,0 +1,27 @@
+.container {
+  --gap: 1rem;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  margin: 1rem 2rem;
+  padding: 2rem 0;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 75%;
+  max-width: 350px;
+  border-top: 1px solid var(--accent-3);
+}
+
+.icon {
+  position: relative;
+  font-size: 1.5rem;
+}
