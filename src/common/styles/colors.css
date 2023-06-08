@@ -1,7 +1,7 @@
 /* Light Mode */
 :root {
   /* Backgrounds */
-  --header-background: hsla(0, 0%, 85%, 0.8);
+  --header-background: hsla(0, 0%, 90%, 0.8);
   --footer-background: hsl(0, 0%, 13%);
 
   --primary: hsl(0, 0%, 95%);
@@ -72,6 +72,11 @@
   /* Backgrounds */
   --header-background: hsla(240, 1%, 15%, 0.8);
 
+  --primary: hsl(0, 0%, 0%);
+  --primary-2: hsl(0, 0%, 7%);
+  --secondary: hsl(0, 0%, 100%);
+  --secondary-2: hsl(210, 17%, 95%);
+
   /* Texts */
   --text-primary: hsl(0, 0%, 100%);
   --text-secondary: hsl(0, 0%, 0%);
@@ -79,16 +84,12 @@
   /* Icons */
   --theme-icon: hsl(210, 25%, 98%);
 
-  --primary: hsl(0, 0%, 0%);
-  --primary-2: hsl(0, 0%, 7%);
-  --secondary: hsl(0, 0%, 100%);
-  --secondary-2: hsl(210, 17%, 95%);
-
+  /* Hover States */
   --hover: rgba(255, 255, 255, 0.075);
   --hover-1: rgba(255, 255, 255, 0.15);
   --hover-2: rgba(255, 255, 255, 0.25);
-  --selection: var(--purple);
 
+  /* Accents */
   --accent-9: hsl(0, 0%, 100%);
   --accent-8: hsl(0, 0%, 98%);
   --accent-7: hsl(0, 0%, 91.8%);
