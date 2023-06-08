@@ -1,4 +1,16 @@
 {
   "title": "Contact & Social Media",
-  "header": "Hi, send me a message!"
+  "header": "Hi, send me a message!",
+  "form": {
+    "name": {
+      "label": "Name",
+      "placeholder": "How should I call you?"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Where can I reach you?"
+    },
+    "message": { "label": "Message", "placeholder": "How can I help you?" },
+    "submit": "Send"
+  }
 }

@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 568px) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+  }
+
+  .form > div:has(input) {
+    flex: 1 1 auto;
+  }
+
+  .form > div:has(textarea) {
+    flex: 1 0 100%;
+  }
+}

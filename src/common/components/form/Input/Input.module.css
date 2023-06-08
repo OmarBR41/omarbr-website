@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  background-color: var(--accent-2);
+  border: 1px solid var(--accent-3);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--box-shadow);
+}
+
+.container::-webkit-input-placeholder {
+  color: var(--accent-5);
+}
+
+.container::-moz-placeholder {
+  color: var(--accent-5);
+}
+
+.container:-ms-input-placeholder {
+  color: var(--accent-5);
+}
+
+.container::-ms-input-placeholder {
+  color: var(--accent-5);
+}
+
+.container::placeholder {
+  color: var(--accent-5);
+}

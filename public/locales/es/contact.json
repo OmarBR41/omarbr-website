@@ -1,4 +1,16 @@
 {
   "title": "Contacto & Redes Sociales",
-  "header": "Hola, ¡envíame un mensaje!"
+  "header": "Hola, ¡envíame un mensaje!",
+  "form": {
+    "name": {
+      "label": "Nombre",
+      "placeholder": "¿Cómo puedo llamarte?"
+    },
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "¿Dónde puedo contactarte?"
+    },
+    "message": { "label": "Mensaje", "placeholder": "¿En qué puedo ayudarte?" },
+    "submit": "Enviar"
+  }
 }
