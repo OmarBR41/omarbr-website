@@ -1,37 +1,44 @@
 import React from 'react';
 
-import { Url } from 'next/dist/shared/lib/router/router';
 import Link from 'next/link';
 
 import classNames from 'classnames';
 
+import { ExtraClassNamesProps, useExtraClassNames } from '@/common/lib/hooks/useExtraClassNames';
+
 import styles from './Button.module.css';
 
-type ButtonType = 'primary' | 'secondary';
-
-interface ButtonProps {
-  type: ButtonType;
-  children?: any;
-  extraClassNames?: string | string[];
-  href?: Url;
-  isTargetExternal?: boolean;
-  onClick?: () => {};
+export enum ButtonVariant {
+  'primary',
+  'secondary',
 }
 
-export const Button = ({ children, extraClassNames, href, isTargetExternal, onClick, type }: ButtonProps) => {
+interface ButtonProps extends React.ComponentPropsWithoutRef<'button'>, ExtraClassNamesProps {
+  children?: any;
+  href?: string;
+  isTargetExternal?: boolean;
+  onClick?: () => {};
+  variant?: ButtonVariant;
+}
+
+export const Button = ({
+  children,
+  href,
+  isTargetExternal,
+  onClick,
+  variant,
+  extraClassNames,
+  ...buttonProps
+}: ButtonProps) => {
+  const validatedExtraClassNames = useExtraClassNames(extraClassNames);
   const buttonClassNames = classNames(
     styles.container,
     {
-      [styles.btnPrimary]: type === 'primary',
-      [styles.btnSecondary]: type === 'secondary',
+      [styles.btnPrimary]: variant === ButtonVariant.primary,
+      [styles.btnSecondary]: variant === ButtonVariant.secondary,
     },
     // Add extraClassNames if not undefined
-    extraClassNames !== undefined && {
-      // Add it as inputted if it's a string
-      [extraClassNames as string]: typeof extraClassNames === 'string',
-      // Add all of them if they're in an array
-    },
-    Array.isArray(extraClassNames) && extraClassNames.map((cn: string) => cn)
+    validatedExtraClassNames
   );
 
   if (href !== undefined && !isTargetExternal) {
@@ -43,7 +50,7 @@ export const Button = ({ children, extraClassNames, href, isTargetExternal, onCl
   }
 
   return (
-    <button className={buttonClassNames} onClick={onClick} type="button">
+    <button className={buttonClassNames} onClick={onClick} {...buttonProps}>
       {children}
     </button>
   );
@@ -51,8 +58,7 @@ export const Button = ({ children, extraClassNames, href, isTargetExternal, onCl
 
 Button.defaultProps = {
   children: undefined,
-  extraClassNames: undefined,
-  href: undefined,
-  onClick: undefined,
   isTargetExternal: false,
+  onClick: undefined,
+  variant: ButtonVariant.primary,
 };
