@@ -5,7 +5,7 @@ import { ContactSection, SocialMedia } from '@/modules/contact';
 import { Head } from '@/modules/layout';
 
 const ContactMe = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('contact');
   const PAGE_TITLE = t('title');
 
   return (
