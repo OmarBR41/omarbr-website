@@ -14,7 +14,7 @@
   }
 
   .form > div:has(input) {
-    flex: 1 1 auto;
+    flex: 1;
   }
 
   .form > div:has(textarea) {
