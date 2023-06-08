@@ -33,9 +33,9 @@ export default async function ContactApi(req: NextApiRequest, res: NextApiRespon
       from: `${name} - ${email}`,
       replyTo: email,
       to: process.env.CONTACT_FORM_RECEIVER_EMAIL,
-      subject: `Contact message from - ${name}`,
+      subject: `Contact message from ${name}`,
       text: message, // plain text body
-      html: `<div>${message} <br /><br />From:<br />${name} - ${email}</div>`,
+      html: `<div>There's a new message from your website:<br /><br />${message}<br /><br />From:<br />${name} - ${email}</div>`,
     });
     res.status(200).json({ message: 'success' });
   } catch (err: any) {
