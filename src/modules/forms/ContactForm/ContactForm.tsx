@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
 import { useTranslation } from 'next-i18next';
-import { Controller, ControllerRenderProps, SubmitHandler, useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { FieldError, FormError, Input, InputGroup, Label, Submit, TextArea, ThankYou } from '@/components/form';
 
@@ -20,6 +20,22 @@ const DEFAULT_INPUT_VALUES = {
   message: '',
 };
 
+const registerOptions = {
+  name: {
+    required: true,
+    maxLength: 80,
+  },
+  email: {
+    required: true,
+    pattern:
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+  },
+  message: {
+    required: true,
+    maxLength: 300,
+  },
+};
+
 export const ContactForm: React.FC = () => {
   const { t } = useTranslation('contact');
 
@@ -28,7 +44,7 @@ export const ContactForm: React.FC = () => {
   const [errorSending, setErrorSending] = useState(false);
 
   const {
-    control,
+    register,
     handleSubmit,
     formState: { errors },
     getValues,
@@ -71,13 +87,29 @@ export const ContactForm: React.FC = () => {
     }
   };
 
-  const renderField = (id: string, field: ControllerRenderProps<Inputs, InputType>) => {
+  const renderField = (id: InputType) => {
     const fieldPlaceholder = t(`form.${id}.placeholder`);
 
     if (id === 'message') {
-      return <TextArea disabled={isSending} id={id} placeholder={fieldPlaceholder} {...field} />;
+      return (
+        <TextArea
+          disabled={isSending}
+          id={id}
+          placeholder={fieldPlaceholder}
+          register={register}
+          registerOptions={registerOptions[id]}
+        />
+      );
     }
-    return <Input disabled={isSending} id={id} placeholder={fieldPlaceholder} {...field} />;
+    return (
+      <Input
+        disabled={isSending}
+        id={id}
+        placeholder={fieldPlaceholder}
+        register={register}
+        registerOptions={registerOptions[id]}
+      />
+    );
   };
 
   const renderInputFields = () => {
@@ -91,12 +123,13 @@ export const ContactForm: React.FC = () => {
       return (
         <InputGroup key={id}>
           <Label id={id}>{fieldLabel}</Label>
-          <Controller
+          {renderField(id)}
+          {/* <Controller
             control={control}
             name={id}
             render={({ field }) => renderField(id, field)}
             rules={{ required: true }}
-          />
+          /> */}
           {hasError && <FieldError message={fieldErrorMessage} />}
         </InputGroup>
       );
