@@ -11,6 +11,8 @@
       "placeholder": "Where can I reach you?"
     },
     "message": { "label": "Message", "placeholder": "How can I help you?" },
-    "submit": "Send"
+    "submit": "Send",
+    "sending": "Sending",
+    "thank-you": "Thanks for writing in! I'll get in touch with you soon."
   }
 }

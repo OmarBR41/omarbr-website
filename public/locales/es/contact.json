@@ -11,6 +11,8 @@
       "placeholder": "¿Dónde puedo contactarte?"
     },
     "message": { "label": "Mensaje", "placeholder": "¿En qué puedo ayudarte?" },
-    "submit": "Enviar"
+    "submit": "Enviar",
+    "sending": "Enviando",
+    "thank-you": "¡Gracias por escribirme!, me pondré en contacto contigo pronto."
   }
 }

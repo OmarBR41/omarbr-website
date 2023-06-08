@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 
 import { useTranslation } from 'next-i18next';
 import { Controller, ControllerRenderProps, SubmitHandler, useForm } from 'react-hook-form';
 
-import { Input, InputGroup, Label, Submit, TextArea } from '@/components/form';
+import { Input, InputGroup, Label, Submit, TextArea, ThankYou } from '@/components/form';
 
 import styles from './ContactForm.module.css';
 
-type InputType = 'name' | 'email' | 'message';
-type Inputs = {
+export type InputType = 'name' | 'email' | 'message';
+export type Inputs = {
   name: string;
   email: string;
   message: string;
@@ -23,18 +23,49 @@ const DEFAULT_INPUT_VALUES = {
 export const ContactForm: React.FC = () => {
   const { t } = useTranslation('contact');
 
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
   const {
     control,
     handleSubmit,
     formState: { errors },
     getValues,
+    reset,
   } = useForm<Inputs>({
     defaultValues: DEFAULT_INPUT_VALUES,
     mode: 'onChange',
   });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      setIsSending(true);
+      setIsSent(false);
+
+      const fetchOptions = {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      };
+
+      const res = await fetch('/api/contact', fetchOptions);
+
+      if (res.ok) {
+        setIsSent(true);
+        reset();
+      }
+
+      if (res.status === 400) {
+        console.error(res);
+      }
+    } catch (err: any) {
+      console.error(err);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const getFieldError = (id: InputType) => {
@@ -46,9 +77,9 @@ export const ContactForm: React.FC = () => {
     const fieldPlaceholder = t(`form.${id}.placeholder`);
 
     if (id === 'message') {
-      return <TextArea id={id} placeholder={fieldPlaceholder} {...field} />;
+      return <TextArea disabled={isSending} id={id} placeholder={fieldPlaceholder} {...field} />;
     }
-    return <Input id={id} placeholder={fieldPlaceholder} {...field} />;
+    return <Input disabled={isSending} id={id} placeholder={fieldPlaceholder} {...field} />;
   };
 
   const renderInputFields = () => {
@@ -71,11 +102,15 @@ export const ContactForm: React.FC = () => {
     });
   };
 
+  const submitLabel = useMemo(() => (isSending ? t('form.sending') : t('form.submit')), [isSending, t]);
+
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       {renderInputFields()}
 
-      <Submit label={t('form.submit')} />
+      <Submit isDisabled={isSending} label={submitLabel} />
+
+      {isSent && <ThankYou />}
     </form>
   );
 };

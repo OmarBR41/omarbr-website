@@ -1,3 +1,9 @@
 .container {
   margin-top: 1rem;
+  min-width: 200px;
+}
+
+.containerDisabled {
+  background-color: var(--blue-darkest);
+  cursor: not-allowed;
 }
