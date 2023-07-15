@@ -1,0 +1,27 @@
+.container {
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  width: 25px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid var(--gray-light);
+  opacity: 0.25;
+}
+
+/* @media (min-width: 768px) {
+  .container {
+    margin: 1.5rem 0;
+    width: 100px;
+  }
+} */
