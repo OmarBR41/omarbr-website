@@ -23,6 +23,9 @@ const Skill = ({ id }: { id: string }) => {
 
   return (
     <div className={styles.icon}>
+      {/* The NextJS logo needs a white bg to show properly bc of Hero bg */}
+      {id === 'NextJS' && <div className={styles.whiteCircleBackground} />}
+
       <Image alt={id} fill src={imageSrc} title={id} />
     </div>
   );
