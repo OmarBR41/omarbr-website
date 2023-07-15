@@ -75,6 +75,9 @@ export const Head: React.FC<SEOProps> = ({ title, description, openGraph, robots
       <meta content={robots ?? 'index,follow'} key="googlebot" name="googlebot" />
       {/* Viewport */}
       <meta content="width=device-width, initial-scale=1" key="viewport" name="viewport" />
+      {/* Favicon */}
+      <link href="/favicon/favicon.ico" rel="icon" sizes="any" />
+
       {/* Content */}
       {children}
     </NextHead>

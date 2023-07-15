@@ -1,13 +1,22 @@
 import React from 'react';
 
-import Image from 'next/image';
+// eslint-disable-next-line camelcase
+import { Akaya_Kanadaka } from 'next/font/google';
 import Link from 'next/link';
+
+import classNames from 'classnames';
 
 import styles from './Logo.module.css';
 
+const akayaFont = Akaya_Kanadaka({
+  weight: '400',
+  style: ['normal'],
+  subsets: ['latin'],
+});
+
 const Logo = () => (
-  <Link className={styles.logo} href="/">
-    <Image alt="Logo" height={24} priority src="/favicon.ico" width={32} />
+  <Link className={classNames(styles.logo, akayaFont.className)} href="/">
+    OBR
   </Link>
 );
 
