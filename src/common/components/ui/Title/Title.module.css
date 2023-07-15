@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+@media screen and (min-width: 568px) {
+  .container {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
