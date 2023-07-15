@@ -1,4 +1,4 @@
-.section__anchor {
+.anchor {
   position: absolute;
   top: var(--header-offset-neg);
 }

@@ -6,3 +6,4 @@ export { Divider } from './Divider';
 export { SocialMediaIcon } from './SocialMediaIcon';
 export { InDevelopment } from './InDevelopment';
 export { LinkWithIcon } from './LinkWithIcon';
+export { SectionAnchor } from './SectionAnchor';
