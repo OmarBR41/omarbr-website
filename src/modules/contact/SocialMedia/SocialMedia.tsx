@@ -1,16 +1,10 @@
 import React from 'react';
 
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { SocialMediaIcon } from '@/components/ui/SocialMediaIcon';
 
 import styles from './SocialMedia.module.css';
-
-interface SocialMediaProps {
-  id: string;
-  icon: IconDefinition;
-  url: string;
-}
 
 const SOCIAL_MEDIAS = [
   {
@@ -25,17 +19,10 @@ const SOCIAL_MEDIAS = [
   },
 ];
 
-export const SocialMedia: React.FC = () => {
-  const handleSocialMediaClick = (id: string, url: string) => {
-    // TODO: add events
-    console.log(id, url);
-  };
-
-  const renderSocialMediaIcon = ({ id, icon, url }: SocialMediaProps) => (
-    <a className={styles.icon} href={url} key={id} onClick={() => handleSocialMediaClick(id, url)} target="_blank">
-      <FontAwesomeIcon icon={icon} />
-    </a>
-  );
-
-  return <div className={styles.container}>{SOCIAL_MEDIAS.map((data) => renderSocialMediaIcon(data))}</div>;
-};
+export const SocialMedia: React.FC = () => (
+  <div className={styles.container}>
+    {SOCIAL_MEDIAS.map(({ id, icon, url }) => (
+      <SocialMediaIcon icon={icon} id={id} key={id} url={url} />
+    ))}
+  </div>
+);
