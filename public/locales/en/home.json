@@ -1,9 +1,10 @@
 {
   "title": "Software Engineer",
+
   "hero": {
-    "title": "Hi! I'm Omar, a Software Engineer",
-    "text": "I specialize on the development and design of websites & mobile applications using modern technologies",
+    "title": "Omar Benavides Ramírez",
+    "text": "Software Engineer specialized on the development of websites & mobile applications, with experience in design and marketing",
     "cta-primary": "Let's chat!",
-    "cta-secondary": "Take a look at my portfolio"
+    "cta-secondary": "See portfolio"
   }
 }

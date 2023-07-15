@@ -1,9 +1,10 @@
 {
   "title": "Ingeniero de Software",
+
   "hero": {
-    "title": "¡Hola! Soy Omar, un Ingeniero de Software",
-    "text": "Me especializo en el desarrollo y diseño de sitios web & aplicaciones móviles con tecnologías modernas",
+    "title": "Omar Benavides Ramírez",
+    "text": "Ingeniero de Software especializado en el desarrollo de sitios web & aplicaciones móviles, con experiencia en diseño y marketing",
     "cta-primary": "¡Hablemos!",
-    "cta-secondary": "Conoce mi portafolio"
+    "cta-secondary": "Ver portafolio"
   }
 }

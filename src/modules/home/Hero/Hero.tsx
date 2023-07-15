@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useTranslation } from 'next-i18next';
 
+import { Divider } from '@/common/components/ui/Divider';
 import { ShootingStars, SkillsIcons } from '@/components/home';
 import { Button, ButtonVariant } from '@/components/ui/Button';
 
@@ -18,7 +19,10 @@ export const Hero: React.FC = () => {
 
       <div className={styles.container}>
         <h1 className={styles.title}>{t('hero.title')}</h1>
-        <p className={styles.text}>{t('hero.text')}</p>
+
+        <Divider />
+
+        <h2 className={styles.text}>{t('hero.text')}</h2>
 
         <div className={styles.ctaContainer}>
           <Button href="/contact-me" variant={ButtonVariant.primary}>
