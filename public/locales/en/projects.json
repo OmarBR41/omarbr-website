@@ -1,0 +1,38 @@
+{
+  "title": "My Projects",
+  "other-projects": "Other Projects",
+  "more-projects": "More Projects",
+  "in-development": "In Development",
+  "open-source-project": "This project is open source! You can look at the code through its GitHub repository by clicking the icon below.",
+
+  "david-camporredondo": {
+    "title": "David Camporredondo",
+    "subtitle": "A Musician's Portfolio",
+    "description": "David is a Mexican guitarist that offers online classes of guitar, piano, and music theory. His page showcases his YouTube videos, his experience as a musician and teacher, and the content of his lessons.",
+    "architecture": "This website was built with NextJS, the web framework of ReactJS, since it helps us optimizing the SEO and performance of the web app."
+  },
+  "wobsgg": {
+    "title": "WobsGG Shop",
+    "subtitle": "NGC Controllers eCommerce",
+    "description": "WobsGG is a business dedicated to the customization and internal modification of Nintendo GameCube Controllers for Smash. This online shop lets users buy the perfect controller for them, and they can save their favorite products for later or share it with their friends. The admin also has the freedom to manage all their products, orders, and more through their personal dashboard.",
+    "architecture": "ReactJS."
+  },
+  "auth-passport-jwt": {
+    "title": "JWT Authentication",
+    "subtitle": "JWT Authentication",
+    "description": "A fullstack app of how to securely add JWT authentication with persisting session to a React app using a NodeJS server using ExpressJS.",
+    "architecture": "This app's frontend is built with ReactJS, handling the app's global state with Redux and LocalStorage to keep a persistent session. In the design I used Tailwind CSS to experiment with its design system's simplicity and consistency.<br/><br/>The backend is an ExpressJS server on NodeJS as an API using GraphQL, letting the frontend register users to a MongoDB database using Passport and JWT to keep a secure authentication. Users can also log in securely and request a password reset."
+  },
+  "ip-address-tracker": {
+    "title": "IP Info & Location",
+    "subtitle": "IP Info & Location",
+    "description": "This web app uses a public API to show an IP's information, including its geo coords, which are later used by Leaflet to render a map showing the location of the requested IP.",
+    "architecture": "ReactJS."
+  },
+  "omarbr": {
+    "title": "OmarBR",
+    "subtitle": "My Portfolio!",
+    "description": "This is the website you're currently in! It's my portfolio where I'll display my projects, write about my career, and maybe start a blog someday.",
+    "architecture": "ReactJS."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Mis Proyectos",
+  "other-projects": "Otros Proyectos",
+  "more-projects": "Más Proyectos",
+  "in-development": "En Desarrollo",
+  "open-source-project": "¡Este proyecto es open source! Puedes ver el código en su repositorio de GitHub dando click al ícono debajo.",
+
+  "david-camporredondo": {
+    "title": "David Camporredondo",
+    "subtitle": "Portafolio de un Músico",
+    "description": "David es un guitarrista mexicano que ofrece clases en línea de guitarra, piano, y teoría musical. Su página muestra sus videos de YouTube, su experiencia como músico y maestro, y el contenido de sus clases.",
+    "architecture": "Este sitio web fue desarrollado con NextJS, el framework web de ReactJS, ya que nos optimiza el SEO y el rendimiento de nuestra app web."
+  },
+  "wobsgg": {
+    "title": "WobsGG",
+    "subtitle": "eCommerce de Controles",
+    "description": "WobsGG es un negocio dedicado a la modificación estética e interna de controles de Nintendo GameCube para Smash. Hecha con NextJS y Saleor, esta tienda online le permite a los clientes comprar el control perfecto para ellos, o pueden guardar su producto favorito o compartirlo con sus amigos. El admin tiene la libertad de administrar sus productos, órdenes, y más, a través de un dashboard personal.",
+    "architecture": "Este sitio web fue desarrollado con NextJS y Saleor."
+  },
+  "auth-passport-jwt": {
+    "title": "JWT Auth",
+    "subtitle": "Autenticación Segura (JWT)",
+    "description": "Aplicación fullstack ejemplificando cómo agregar autenticación JWT segura con sesión persistente a una app de React con un servidor de NodeJS usando ExpressJS.",
+    "architecture": "El frontend de esta aplicación está hecho con ReactJS, manejando el estado de la app con Redux y LocalStorage para mantener una sesión persistente. En el diseño utilicé Tailwind CSS para experimentar con la simplicidad y consistencia de su sistema de diseño.<br/><br/>El backend es un servidor de ExpressJS en NodeJS actuando como API usando GraphQL, permitiendo al frontend registrar usuarios a una base de datos de MongoDB usando Passport y JWT para mantener una autenticación segura. Los usuarios también pueden iniciar sesión y solicitar un reinicio de contraseña."
+  },
+  "ip-address-tracker": {
+    "title": "Buscador de IP",
+    "subtitle": "Ubicación e Info de un IP",
+    "description": "Esta app web usa una API pública para mostrar información sobre un IP, incluyendo sus coordenadas, las cuales son usadas luego por Leaflet para mostrar un mapa con la ubicación de la IP solicitada.",
+    "architecture": "Desarrollado con ReactJS"
+  },
+  "omarbr": {
+    "title": "OmarBR",
+    "subtitle": "¡Mi Portafolio!",
+    "description": "¡Éste es el sitio en el que estás! Es mi portafolio en donde mostraré mis proyectos, escribiré sobre mi carrera, y quizá comience un blog algún día.",
+    "architecture": "A lo largo del desarrollo de mi sitio web he explorado con diferentes tecnologías, y seguro habrá más cambios, pero actualmente el sitio está desarrollado con NextJS."
+  }
+}
