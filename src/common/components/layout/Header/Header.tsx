@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import { MenuButton, Nav, ThemeToggler } from '@/components/nav';
 import { Button, Logo } from '@/components/ui';
 import { MD_SIZE } from '@/constants/screenBreakpoints';
-import { useOnClickOutside, useWindowSize } from '@/lib/hooks';
+import { useOnClickOutside, useOnRouteChange, useWindowSize } from '@/lib/hooks';
 
 import styles from './Header.module.css';
 
@@ -18,6 +18,7 @@ export const Header: React.FC = () => {
 
   const { width } = useWindowSize();
   useOnClickOutside(ref, () => closeNav());
+  useOnRouteChange(closeNav);
 
   const toggleNav = () => {
     setIsNavOpen((prevState) => !prevState);
