@@ -11,10 +11,12 @@ export const Hero: React.FC = () => {
   const { t } = useTranslation('home');
 
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
+      <div className={styles.background} />
+
       <ShootingStars />
 
-      <div className={styles.textContainer}>
+      <div className={styles.container}>
         <h1 className={styles.title}>{t('hero.title')}</h1>
         <p className={styles.text}>{t('hero.text')}</p>
 
