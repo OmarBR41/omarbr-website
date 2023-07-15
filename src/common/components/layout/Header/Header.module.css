@@ -9,6 +9,7 @@
   background-color: var(--header-background);
   -webkit-backdrop-filter: var(--backdrop-filter);
   backdrop-filter: var(--backdrop-filter);
+  box-shadow: var(--header-box-shadow);
   z-index: 1000;
 }
 

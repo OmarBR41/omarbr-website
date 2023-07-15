@@ -10,6 +10,7 @@
   /* Header */
   --header-offset: 90px;
   --header-offset-neg: calc(var(--header-offset) * -1);
+  --header-box-shadow: 0 0.5rem 0.5rem -0.25rem hsla(0, 0%, 0%, 0.1);
 
   /* --- Misc --- */
   --box-shadow: 0.5rem 0.5rem 0.5rem -0.25rem hsla(0, 0%, 0%, 0.1);
