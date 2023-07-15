@@ -5,7 +5,7 @@ import NextHead from 'next/head';
 
 import { DefaultSeo } from 'next-seo';
 
-import { GAScripts, ogImage, type OgImageProps } from '@/components/seo';
+import { GAScripts } from '@/components/seo';
 import seoConfigJson from '@/config/seo.json';
 
 interface SEOProps {
@@ -20,7 +20,6 @@ interface SEOProps {
     locale?: string;
     url?: string;
     site_name?: string;
-    images?: OgImageProps[];
   };
 }
 
@@ -56,20 +55,6 @@ export const Head: React.FC<SEOProps> = ({ title, description, openGraph, robots
       />
       <meta content={openGraph?.url ?? seoConfigJson.openGraph.url} key="og:url" property="og:url" />
       <meta content={openGraph?.locale ?? seoConfigJson.openGraph.locale} key="og:locale" property="og:locale" />
-      {openGraph?.images?.length
-        ? openGraph.images.map((img, index) => ogImage(img, index))
-        : ogImage(seoConfigJson.openGraph.images[0], 0)}
-
-      {/* Twitter Cards */}
-      {seoConfigJson.twitter.cardType && (
-        <meta content={seoConfigJson.twitter.cardType} key="twitter:card" name="twitter:card" />
-      )}
-      {seoConfigJson.twitter.site && (
-        <meta content={seoConfigJson.twitter.site} key="twitter:site" name="twitter:site" />
-      )}
-      {seoConfigJson.twitter.handle && (
-        <meta content={seoConfigJson.twitter.handle} key="twitter:creator" name="twitter:creator" />
-      )}
       {/* Robots */}
       <meta content={robots ?? 'index,follow'} key="robots" name="robots" />
       <meta content={robots ?? 'index,follow'} key="googlebot" name="googlebot" />

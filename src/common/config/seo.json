@@ -8,8 +8,7 @@
     "type": "website",
     "locale": "en_US",
     "url": "https://omarbr.com",
-    "site_name": "Omar BR",
-    "images": [{}]
+    "site_name": "Omar BR"
   },
   "twitter": {
     "cardType": "summary_large_image"
