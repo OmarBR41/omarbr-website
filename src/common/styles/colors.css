@@ -2,7 +2,9 @@
 :root {
   /* Backgrounds */
   --header-background: hsla(0, 0%, 90%, 0.8);
-  --footer-background: hsl(0, 0%, 13%);
+  --footer-background: hsl(0, 0%, 10%);
+  --body-background: hsl(0, 0%, 98%);
+  --card-background: hsl(0, 0%, 98%);
 
   --primary: hsl(0, 0%, 95%);
   --primary-2: hsl(210, 15%, 95%);
@@ -58,6 +60,10 @@
 
   /* Gray */
   --gray-light: hsl(0, 0%, 85%);
+  --gray: hsl(0, 0%, 50%);
+  --gray-dark: hsl(0, 0%, 16%);
+  --gray-darker: hsl(0, 0%, 8%);
+  --gray-darkest: hsl(0, 0%, 6%);
 
   /* More */
   --cyan: hsl(188, 72%, 47%);
@@ -71,6 +77,7 @@
 [data-theme='dark'] {
   /* Backgrounds */
   --header-background: hsla(240, 1%, 15%, 0.8);
+  --body-background: hsl(0, 0%, 12%);
 
   --primary: hsl(0, 0%, 0%);
   --primary-2: hsl(0, 0%, 7%);

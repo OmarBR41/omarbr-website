@@ -5,8 +5,9 @@
   /*  --- Layout --- */
   --font-size: 16px;
   --border-radius: 8px;
-  --border-radius-sm: 4px;
   --icon-size: 1.25rem;
+  --section-padding: 1.25rem;
+
   /* Header */
   --header-offset: 90px;
   --header-offset-neg: calc(var(--header-offset) * -1);
@@ -14,6 +15,7 @@
 
   /* --- Misc --- */
   --box-shadow: 0.5rem 0.5rem 0.5rem -0.25rem hsla(0, 0%, 0%, 0.1);
+  --card-shadow: 0 0.25rem 0.75rem 0.25rem hsla(0, 0%, 0%, 0.2);
   --backdrop-filter: saturate(180%) blur(5px);
 }
 
@@ -44,7 +46,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
-  background-color: var(--accent-1);
+  background-color: var(--body-background);
   font-size: var(--font-size);
   font-weight: normal;
   overscroll-behavior-x: none;
@@ -62,7 +64,7 @@ main {
 }
 
 main > section {
-  padding: 2rem;
+  padding: var(--section-padding);
 }
 
 a {
@@ -117,3 +119,15 @@ svg {
   fill: inherit;
 }
 /* Image/SVGs reset [end] */
+
+@media (min-width: 400px) {
+  :root {
+    --section-padding: 1.5rem;
+  }
+}
+
+@media (min-width: 620px) {
+  :root {
+    --section-padding: 2rem;
+  }
+}
