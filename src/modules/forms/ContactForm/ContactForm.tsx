@@ -76,11 +76,11 @@ export const ContactForm: React.FC = () => {
         reset();
       }
 
-      if (res.status === 400) {
+      if (res.status === 400 || res.status === 500) {
         setErrorSending(true);
       }
     } catch (err: any) {
-      // console.error(err);
+      console.error(err.message);
       setErrorSending(true);
     } finally {
       setIsSending(false);
@@ -101,6 +101,7 @@ export const ContactForm: React.FC = () => {
         />
       );
     }
+
     return (
       <Input
         disabled={isSending}
@@ -124,19 +125,23 @@ export const ContactForm: React.FC = () => {
         <InputGroup key={id}>
           <Label id={id}>{fieldLabel}</Label>
           {renderField(id)}
-          {/* <Controller
-            control={control}
-            name={id}
-            render={({ field }) => renderField(id, field)}
-            rules={{ required: true }}
-          /> */}
           {hasError && <FieldError message={fieldErrorMessage} />}
         </InputGroup>
       );
     });
   };
 
-  const submitLabel = useMemo(() => (isSending ? t('form.sending') : t('form.submit')), [isSending, t]);
+  const submitLabel = useMemo(() => {
+    if (isSending) {
+      return t('form.sending');
+    }
+
+    if (errorSending) {
+      return t('form.try-again');
+    }
+
+    return t('form.submit');
+  }, [errorSending, isSending, t]);
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>

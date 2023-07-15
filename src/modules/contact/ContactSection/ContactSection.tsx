@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useTranslation } from 'next-i18next';
 
+import { Title } from '@/components/ui';
 import { ContactForm } from '@/modules/forms';
 
 import styles from './ContactSection.module.css';
@@ -11,7 +12,7 @@ export const ContactSection: React.FC = () => {
 
   return (
     <section className={styles.container}>
-      <h1 className={styles.header}>{t('header')}</h1>
+      <Title>{t('header')}</Title>
       <ContactForm />
     </section>
   );
