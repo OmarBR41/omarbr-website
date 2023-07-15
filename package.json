@@ -7,7 +7,7 @@
   },
   "description": "Frontend project built on Next.js to showcase my personal portfolio",
   "scripts": {
-    "dev": "next dev",
+    "dev": "[ -e .env.local ] && set -a && . ./.env.local; next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
