@@ -4,6 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { ContactSection } from '@/modules/contact';
 import { About, Hero } from '@/modules/home';
 import { Head } from '@/modules/layout';
+import { ProjectsSection } from '@/modules/projects';
 
 const Home = () => {
   const { t } = useTranslation('home');
@@ -13,7 +14,7 @@ const Home = () => {
     <>
       <Head title={PAGE_TITLE} />
       <Hero />
-      <About />
+      <ProjectsSection />
       <ContactSection />
     </>
   );
@@ -22,7 +23,7 @@ const Home = () => {
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'contact', 'home'])),
+      ...(await serverSideTranslations(locale, ['common', 'contact', 'projects', 'home'])),
     },
   };
 }
