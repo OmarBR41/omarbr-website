@@ -5,7 +5,7 @@
     "name": {
       "label": "Name",
       "placeholder": "How should I call you?",
-      "error": "I need to know who I'm gonna talk with"
+      "error": "This can be your name, alias, or company"
     },
     "email": {
       "label": "Email",
@@ -19,6 +19,7 @@
     },
     "submit": "Send",
     "sending": "Sending",
+    "try-again": "Try Again",
     "thank-you": "Thanks for writing in! I'll get in touch with you soon.",
     "error": "There was an error sending your message, please try again"
   }

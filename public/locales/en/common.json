@@ -12,5 +12,12 @@
       "title": "500 - Server-side error",
       "message": "An error ocurred on the server. Please try again later."
     }
+  },
+
+  "misc": {
+    "architecture": "Architecture",
+    "description": "Description",
+    "open-source": "Open Source",
+    "links": "Links"
   }
 }

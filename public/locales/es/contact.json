@@ -5,7 +5,7 @@
     "name": {
       "label": "Nombre",
       "placeholder": "¿Cómo puedo llamarte?",
-      "error": "Necesito saber con quién hablaré"
+      "error": "Puede ser tu nombre, alias, o compañía"
     },
     "email": {
       "label": "Correo electrónico",
@@ -19,6 +19,7 @@
     },
     "submit": "Enviar",
     "sending": "Enviando",
+    "try-again": "Intentar otra vez",
     "thank-you": "¡Gracias por escribirme! Me pondré en contacto contigo pronto.",
     "error": "Hubo un error enviando tu mensaje, por favor intenta de nuevo"
   }

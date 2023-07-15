@@ -15,5 +15,12 @@
       "title": "500 - Error en el Servidor",
       "message": "Ha ocurrido un error en el servidor, intente más tarde."
     }
+  },
+
+  "misc": {
+    "architecture": "Arquitectura",
+    "description": "Descripción",
+    "open-source": "Open Source",
+    "links": "Links"
   }
 }
