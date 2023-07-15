@@ -1,0 +1,16 @@
+.icons {
+  display: flex;
+  gap: 0.75rem;
+
+  font-size: 1.25em;
+  color: var(--accent-7);
+}
+
+.icons > * {
+  opacity: 0.75;
+  transition: opacity 500ms ease-in-out;
+}
+
+.icons > *:hover {
+  opacity: 1;
+}
