@@ -12,6 +12,8 @@
 /* Primary */
 
 .btnPrimary {
+  font-weight: 600;
+  font-size: 0.9rem;
   border-color: var(--blue);
   background-color: var(--blue);
 }
@@ -35,6 +37,7 @@
 
 .btnSecondary {
   font-size: 0.8rem;
+  font-weight: 300;
 }
 
 .btnSecondary:hover {
@@ -47,4 +50,14 @@
 
 .btnSecondary:active {
   border-color: var(--blue-darker);
+}
+
+@media (min-width: 768px) {
+  .btnPrimary {
+    font-size: 0.95rem;
+  }
+
+  .btnSecondary {
+    font-size: 0.9rem;
+  }
 }
