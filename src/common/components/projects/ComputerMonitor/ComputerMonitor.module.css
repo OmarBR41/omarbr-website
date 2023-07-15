@@ -1,0 +1,76 @@
+.container {
+  --monitor-border-radius: 0.625rem;
+  --monitor-shadow-color: rgba(0, 0, 0, 0.3);
+
+  position: relative;
+  width: 100%;
+
+  border-radius: var(--monitor-border-radius);
+  border: 2px solid var(--monitor-shadow-color);
+  box-shadow: inset 0 0 8px var(--monitor-shadow-color);
+  z-index: 10;
+}
+
+.monitor {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #000;
+  border-bottom: 1.1rem solid #d8d8d8;
+  border-radius: var(--monitor-border-radius);
+}
+
+.monitor:before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  bottom: -2.75rem;
+  width: 25%;
+  height: 2.25rem;
+  background: #bdbdbd;
+  transform: perspective(100px) translateX(-50%) rotateX(25deg) skewX(7deg);
+  transform-origin: bottom;
+  z-index: -1;
+}
+
+.monitor:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -3.25rem;
+  width: 48%;
+  height: 0.5rem;
+  background: #bdbdbd;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  z-index: -1;
+}
+
+.monitor i {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  color: #858585;
+  tex-decoration: none;
+  transform: translateX(-50%) scale(0 0.8);
+}
+
+.monitorImageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: var(--monitor-border-radius);
+  border-top-right-radius: var(--monitor-border-radius);
+  overflow: hidden;
+}
+
+.imageOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.monitorImage {
+  max-width: 100%;
+}
