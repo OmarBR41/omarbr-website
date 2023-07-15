@@ -5,3 +5,4 @@ export { Title } from './Title';
 export { Divider } from './Divider';
 export { SocialMediaIcon } from './SocialMediaIcon';
 export { InDevelopment } from './InDevelopment';
+export { LinkWithIcon } from './LinkWithIcon';
