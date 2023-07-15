@@ -1,0 +1,88 @@
+.container {
+  --card-padding: 1rem;
+  --card-spacing: 0.5rem;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 1rem;
+
+  background-color: var(--body-background);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.topContainer {
+  flex: 1;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.imageContainer::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 500ms ease-in-out;
+}
+
+.topContainer a:hover .imageContainer::after {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.contentContainer {
+  padding: var(--card-padding) var(--card-padding) var(--card-spacing);
+}
+
+.title {
+  font-size: 1em;
+}
+
+.description {
+  display: -webkit-box;
+
+  margin-top: var(--card-spacing);
+  font-size: 0.75em;
+  font-weight: 300;
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.stackContainer {
+  margin: 0 var(--card-padding) var(--card-spacing);
+}
+
+.stackContainer > div {
+  gap: 0.25rem;
+}
+
+.bottomContainer {
+  padding: var(--card-spacing) 0.25rem var(--card-padding);
+  margin: 0 var(--card-padding);
+  border-top: solid 1px var(--accent-4);
+}
+
+@media (min-width: 420px) {
+  .container {
+    --card-padding: 1.25rem;
+    --card-spacing: 0.75rem;
+
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    --card-spacing: 1rem;
+  }
+}
