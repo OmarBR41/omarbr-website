@@ -17,21 +17,19 @@ interface NavProps {
 const Nav = ({ isNavOpen }: NavProps) => {
   const { t } = useTranslation('common');
   const navClasses = classNames(styles.container, { [styles.containerShown]: isNavOpen });
-  const lastIdx = navData.length - 1;
 
   const renderNavLinks = () =>
-    navData.map(({ id, href, icon }, idx) => (
+    navData.map(({ id, href, icon }) => (
       <Fragment key={id}>
         <NavLink href={href} icon={icon} id={id} />
-        {idx < lastIdx && <span className={styles.separator} />}
       </Fragment>
     ));
 
   return (
     <nav className={navClasses}>
-      {renderNavLinks()}
+      <div className={styles.navLinks}>{renderNavLinks()}</div>
 
-      <Button extraClassNames={styles.cta} href="/contact-me" type="primary">
+      <Button extraClassNames={styles.cta} href="/contact-me">
         {t('nav.contact')}
       </Button>
     </nav>
