@@ -4,7 +4,18 @@ import Image from 'next/image';
 
 import styles from './SkillsIcons.module.css';
 
-const SKILLS = ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Redux', 'NextJS', 'PostgreSQL', 'Figma'];
+const SKILLS = [
+  'HTML5',
+  'CSS3',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Redux',
+  'NextJS',
+  'Docker',
+  'PostgreSQL',
+  'Figma',
+];
 
 const Skill = ({ id }: { id: string }) => {
   const idLowercase = id.toLowerCase();
