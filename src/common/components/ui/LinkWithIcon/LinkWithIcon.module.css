@@ -1,10 +1,13 @@
 .container {
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+
   color: var(--accent-7);
+  font-size: 0.9rem;
+  font-weight: 400;
+
   cursor: pointer;
 }
 
