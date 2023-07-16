@@ -39,8 +39,8 @@ export const Header: React.FC = () => {
         <Nav isNavOpen={isNavOpen} />
 
         <div className={styles.rightGroup}>
-          <ThemeToggler />
           <LanguageSwitcher />
+          <ThemeToggler />
 
           <Button extraClassNames={styles.cta} href="/contact-me">
             {t('nav.contact')}
