@@ -20,10 +20,12 @@ const OtherProjects = ({ excludedId }: OtherProjectsProps) => {
 
   return (
     <section className={styles.container}>
-      <Title>{t('other-projects')}</Title>
-      <ProjectsList filterBy={excludeProjectById} qty={3} />
+      <div className={styles.wrapper}>
+        <p className={styles.title}>{t('other-projects')}</p>
+        <ProjectsList filterBy={excludeProjectById} qty={3} />
+      </div>
 
-      <LinkWithIcon href="/projects" text={t('other-projects')} icon={faArrowRight} />
+      <LinkWithIcon href="/projects" text={t('more-projects')} icon={faArrowRight} />
     </section>
   );
 };

@@ -6,20 +6,21 @@
   background-color: var(--accent-2);
 }
 
-.moreProjectsLink {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: var(--accent-7);
-  cursor: pointer;
+.wrapper {
+  margin-bottom: 1.25rem;
 }
 
-.moreProjectsLink > * {
-  flex: 1;
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0.5rem 0 1.5rem;
+  letter-spacing: -1px;
 }
 
-.moreProjectsLink:hover {
-  color: var(--accent-9);
+@media screen and (min-width: 568px) {
+  .title {
+    font-size: 1.75rem;
+    margin: 0.5rem 0 2rem;
+  }
 }
