@@ -18,6 +18,7 @@
   },
 
   "misc": {
+    "go-back": "Regresar",
     "architecture": "Arquitectura",
     "description": "Descripción",
     "open-source": "Open Source",

@@ -7,3 +7,4 @@ export { SocialMediaIcon } from './SocialMediaIcon';
 export { InDevelopment } from './InDevelopment';
 export { LinkWithIcon } from './LinkWithIcon';
 export { SectionAnchor } from './SectionAnchor';
+export { GoBack } from './GoBack';

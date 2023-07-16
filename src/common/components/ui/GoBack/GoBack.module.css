@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: var(--accent-7);
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.container:hover {
+  color: var(--accent-9);
+}
+
+.icon {
+  width: auto;
+}
+
+.text {
+  flex: 1;
+}

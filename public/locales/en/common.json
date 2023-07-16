@@ -15,6 +15,7 @@
   },
 
   "misc": {
+    "go-back": "Go Back",
     "architecture": "Architecture",
     "description": "Description",
     "open-source": "Open Source",
