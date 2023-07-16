@@ -1,0 +1,174 @@
+.container {
+  --image-size: 1.8rem;
+  --image-size-halved: calc(var(--image-size) / 2);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  background-color: var(--accent-2);
+}
+
+.timelineContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 1rem;
+  max-width: 1280px;
+}
+
+.timelineContainer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--image-size-halved);
+  height: 100%;
+  margin-left: -1px;
+
+  border-left: 2px solid var(--gray-light);
+  border-radius: 50%;
+
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.timelineBlock {
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 5;
+}
+
+.timelineBlock:last-child:before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: var(--image-size);
+  height: 100%;
+  background-color: var(--accent-2);
+  z-index: 1;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--image-size);
+  height: var(--image-size);
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: var(--card-shadow);
+  z-index: 10;
+}
+
+.image {
+  width: 70%;
+  height: auto;
+}
+
+.timelineContent {
+  flex: 1;
+  width: 95%;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+
+  background-color: var(--body-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4em;
+  margin-bottom: 0.2rem;
+}
+
+.companyName {
+  flex: 1;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.dates {
+  flex: 0 1 auto;
+  align-self: flex-end;
+  font-size: 0.65em;
+  letter-spacing: -1px;
+}
+
+.jobTitle {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+.divider {
+  margin-bottom: 0.4rem;
+  border-top: solid 1px var(--accent-4);
+}
+
+.jobOverview {
+  font-size: 0.7em;
+  font-weight: 300;
+}
+
+@media (min-width: 400px) {
+  .timelineContent {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 520px) {
+  .container {
+    --image-size: 2rem;
+  }
+
+  .timelineContent {
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .timelineContent {
+    font-size: 1.25rem;
+    padding: 0.8rem 1.1rem;
+  }
+}
+
+@media (min-width: 928px) {
+  .container {
+    --image-size: 2.25rem;
+  }
+
+  .timelineContainer {
+    --offset-percentage: 50%;
+    --offset: calc(var(--offset-percentage) - var(--image-size-halved));
+  }
+
+  .timelineContainer::before {
+    left: var(--offset-percentage);
+  }
+
+  .timelineBlock:nth-child(odd) {
+    margin-left: var(--offset);
+  }
+
+  .timelineBlock:nth-child(even) {
+    flex-direction: row-reverse;
+    margin-right: var(--offset);
+  }
+
+  .timelineBlock:last-child:before {
+    left: unset;
+    right: 0;
+  }
+}
