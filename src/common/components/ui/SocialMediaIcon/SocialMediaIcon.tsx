@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './SocialMediaIcon.module.css';
 
 interface SocialMediaIconProps {
   id: string;
-  icon: IconDefinition;
+  icon: IconProp;
   url: string;
 }
 
