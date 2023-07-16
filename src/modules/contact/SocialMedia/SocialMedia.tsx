@@ -41,8 +41,8 @@ export const SocialMedia = () => {
 
   const renderCV = useCallback(
     ({ id, icon, url }: SocialMediaIcon) => (
-      <div className={styles.cvIcon}>
-        <SocialMediaIcon icon={icon} id={id} key={id} url={replaceContentInsideParenthesis(url, language)} />
+      <div className={styles.cvIcon} key={id}>
+        <SocialMediaIcon icon={icon} id={id} url={replaceContentInsideParenthesis(url, language)} />
       </div>
     ),
     [language]
