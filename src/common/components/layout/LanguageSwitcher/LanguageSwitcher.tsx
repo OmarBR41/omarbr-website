@@ -39,6 +39,7 @@ export const LanguageSwitcher = () => {
     async (newLocale: string) => {
       setCurrent(newLocale);
       await switchToLocale(newLocale);
+      setIsDropdownOpen(false);
     },
     [switchToLocale]
   );

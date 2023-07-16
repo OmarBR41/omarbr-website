@@ -7,7 +7,7 @@
 
   position: absolute;
   right: calc(100% + 1rem);
-  bottom: -0.4rem;
+  top: -0.4rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -21,7 +21,7 @@
   content: '';
   display: block;
   position: absolute;
-  bottom: 0.5rem;
+  top: 0.5rem;
   left: 100%;
 
   border: 0.5rem solid transparent;

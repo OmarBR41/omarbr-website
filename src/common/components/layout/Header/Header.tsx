@@ -6,6 +6,7 @@ import { MenuButton, Nav, ThemeToggler } from '@/components/nav';
 import { Button, Logo } from '@/components/ui';
 import { MD_SIZE } from '@/constants/screenBreakpoints';
 import { useOnClickOutside, useOnRouteChange, useWindowSize } from '@/lib/hooks';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 
 import styles from './Header.module.css';
 
@@ -39,6 +40,8 @@ export const Header: React.FC = () => {
 
         <div className={styles.rightGroup}>
           <ThemeToggler />
+          <LanguageSwitcher />
+
           <Button extraClassNames={styles.cta} href="/contact-me">
             {t('nav.contact')}
           </Button>
