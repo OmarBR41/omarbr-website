@@ -10,7 +10,7 @@ const Custom404 = () => {
   return (
     <>
       <Head title={PAGE_TITLE} />
-      <ErrorLayout text={t('errors.404.message')} title={t('errors.404.title')} />;
+      <ErrorLayout text={t('errors.404.message')} title={t('errors.404.title')} />
     </>
   );
 };
