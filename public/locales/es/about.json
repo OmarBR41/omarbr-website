@@ -1,15 +1,16 @@
 {
   "title": "Acerca de mí",
-  "text": "Lorem ipsum dolor sit amet, consectetur",
+  "text": "Hi! My name is Omar, and I'm a full-stack developer with a strong background on marketing, design, and monetization.<br/><br/>I consider myself a creative problem-solver with a passion for design and an eye for detail, delivering high-quality code and user-friendly software solutions on time, capable of working with small and big teams using Git flows and Agile/Scrum methodologies, always committed to continuous learning and growth.<br /><br />My expertise is the frontend, where I usually work with NextJS, ReactJS, Redux, JavaScript, TypeScript, HTML5, CSS3, MUI, Storybook, and Figma.<br /><br />However, I'm also highly experienced with backend, testing, databases, and servers, using languages & tools like NodeJS, Python, GCP, Firebase, Firestore, SQL & NoSQL, GraphQL, REST APIs, Jest, Jenkins, Git, Docker, Nginx, Ubuntu, and more.",
+  "see-work-experience": "Ver experiencia laboral",
 
   "work-experience": "Experiencia Laboral",
-  "software-engineer": "Ingeniero de Software",
-  "fullstack-developer": "Desarrollador Fullstack",
-  "web-developer": "Desarrollador Web",
-
   "jobs": {
+    "software-engineer": "Ingeniero de Software",
+    "fullstack-developer": "Desarrollador Fullstack",
+    "web-developer": "Desarrollador Web",
+
     "evernote": "Me uní al equipo de Crecimiento y Monetización, donde trabajamos en la web app con React & TypeScript (incluyendo una app desktop con Electron para Windows & Mac), y la app móvil con React Native para Android & iOS, así como múltiples microservicios en Java, NodeJS, Python, y más.<br/><br/>Principalmente trabajábamos en los paywalls y upsells de las apps para que los usuarios mejoren su subscripción, usualmente ofreciéndoles descuentos o periodos de prueba basándonos en diversos factores y condiciones.",
-    "lernit": "Como parte del equipo de desarrollo, trabajé en su app de e-learning con React, Redux y GraphQL.<br /><br />Trabajé principalmente en el dashboard de los admins, mejorando el rendimiento y flujo de la creación y administración de Cursos y Learning Paths, y también en las tablas y gráficas que usan los instructores para monitorear la asistencia y rendimiento de los usuarios a través de sus cursos.<br /><br />Mis responsabilidades diarias eran desarrollar nuevos componentes y funcionalidades, debugging y resolver errores, refactorizar y optimizar código existente, hacer pair programming, y code reviews.",
+    "lernit": "Como parte del equipo de desarrollo principal, trabajé en su app de e-learning con React, Redux y GraphQL.<br /><br />Trabajé principalmente en el dashboard de los admins, mejorando el rendimiento y flujo de la creación y administración de Cursos y Learning Paths, y también en las tablas y gráficas que usan los instructores para monitorear la asistencia y rendimiento de los usuarios a través de sus cursos.<br /><br />Mis responsabilidades diarias eran desarrollar nuevos componentes y funcionalidades, debugging y resolver errores, refactorizar y optimizar código existente, hacer pair programming, y code reviews.",
     "green-clean": "Mi primer proyecto fue desarrollar un sitio web para vender equipo de lavadoras y secadoras, con la asistencia profesional a personas interesadas en comenzar su propio negocio de tintorería.<br/><br/>Durante la pandemia trabajé en una app móvil para ofrecer los servicios de lavandería a domicilio, para que los clientes puedan solicitar que pasen a su domicilio a recoger y entregar la ropa, permitiéndoles pagar por la app o en efectivo, y ver el estado de su orden actual, historial de órdenes, y más.<br /><br />La app fue diseñada con AdobeXD y desarrollada usando React Native, Firebase, Firestore, Maps API, para Android & iOS.",
     "besser-lighting": "Estuve en un pequeño equipo de marketing dedicado al sitio web de la empresa, mostrando el catalogo de sus productos, casos de estudio, con newsletter y formulario de contacto, para atraer clientes nuevos interesados en luminarias industriales y comerciales.<br /><br />Trabajamos en múltiples versiones del sitio, experimentando con diferentes diseños, animaciones y contenido.<br /><br />The website was developed using HTML5 & CSS3 with jQuery, running on a Flask server with a MongoDB database, hosted on an Ubuntu server with Apache2."
   }

@@ -24,3 +24,6 @@ export const slugify = (str: string) =>
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
+
+export const replaceContentInsideParenthesis = (str: string, newContent: string) =>
+  str.replace(/(\(.*?\))/g, '(' + newContent + ')');

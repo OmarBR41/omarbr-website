@@ -4,7 +4,6 @@
   --header-background: hsla(0, 0%, 90%, 0.8);
   --footer-background: hsl(0, 0%, 10%);
   --body-background: hsl(0, 0%, 98%);
-  --card-background: hsl(0, 0%, 98%);
 
   --primary: hsl(0, 0%, 95%);
   --primary-2: hsl(210, 15%, 95%);
@@ -45,6 +44,7 @@
   --blue-darkest: hsl(212, 100%, 20%);
 
   /* Red */
+  --red-bright: hsl(3, 98%, 48%);
   --red: hsl(0, 68%, 55%);
   --red-error: hsl(1, 83%, 63%);
 

@@ -1,13 +1,14 @@
 {
   "title": "About me",
-  "text": "Lorem ipsum dolor sit amet, consectetur",
+  "text": "Hi! My name is Omar, and I'm a full-stack developer with a strong background on marketing, design, and monetization.<br/><br/>I consider myself a creative problem-solver with a passion for design and an eye for detail, delivering high-quality code and user-friendly software solutions on time, capable of working with small and big teams using Git flows and Agile/Scrum methodologies, always committed to continuous learning and growth.<br /><br />My expertise is the frontend, where I usually work with NextJS, ReactJS, Redux, JavaScript, TypeScript, HTML5, CSS3, MUI, Storybook, and Figma.<br /><br />However, I'm also highly experienced with backend, testing, databases, and servers, using languages & tools like NodeJS, Python, GCP, Firebase, Firestore, SQL & NoSQL, GraphQL, REST APIs, Jest, Jenkins, Git, Docker, Nginx, Ubuntu, and more.",
+  "see-work-experience": "See work experience",
 
   "work-experience": "Work Experience",
-  "software-engineer": "Software Engineer",
-  "fullstack-developer": "Fullstack Developer",
-  "web-developer": "Web Developer",
-
   "jobs": {
+    "software-engineer": "Software Engineer",
+    "fullstack-developer": "Fullstack Developer",
+    "web-developer": "Web Developer",
+
     "evernote": "I joined the Growth Monetization team, where we worked on the web app with React & TypeScript (including a desktop app with Electron), and the mobile app on React Native for both Android & iOS, as well as multiple microservices on Java, NodeJS, Python, and more.<br/><br/>We mostly worked on the apps' paywalls and upsells to engage users on upgrading their subscription, mainly by offering them discounts or free trials based on multiple factors and conditions.",
     "lernit": "As part of their main development team, I worked on their e-learning platform with React, Redux and GraphQL.<br /><br />I worked mostly on the admin dashboards, improving the performance and flow of the creation and management of their Courses and Learning Paths, and also worked on the tables and graphs that instructors use to monitor the users' attendance and performance through their courses.<br /><br />My daily tasks were developing new components and features, debugging and solving issues, refactoring and optimizing existing code, doing pair programming, and performing code reviews.",
     "green-clean": "My first project here was to develop a website to sell laundry machines and professional assistance to people interested in starting their own laundromat businesses.<br/><br/>During the pandemic I worked on a mobile app to offer laundry services on demand, so the clients can request their clothes to be picked up at their address, letting them pay through the app or cash, and see their current order's status, history, and more.<br /><br />The app was designed with AdobeXD and developed using React Native, Firebase, Firestore, Maps API, for Android & iOS.",
