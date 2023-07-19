@@ -24,7 +24,12 @@ const ProjectCard = ({ id, url, title, description, stack, repoUrl, isInDevelopm
       <div className={styles.topContainer}>
         <Link href={projectUrl}>
           <div className={styles.imageContainer}>
-            <Image alt={title} fill src={`/projects/${id}/thumbnail.png`} />
+            <Image
+              alt={title}
+              fill
+              src={`/projects/${id}/thumbnail.png`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
 
             {isInDevelopment && <InDevelopment />}
           </div>
