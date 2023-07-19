@@ -2,8 +2,8 @@
 :root {
   /* Backgrounds */
   --header-background: hsla(0, 0%, 90%, 0.8);
-  --footer-background: hsl(0, 0%, 10%);
   --body-background: hsl(0, 0%, 98%);
+  --footer-background: linear-gradient(0deg, hsl(0, 0%, 10%), hsl(0, 0%, 16%));
 
   --primary: hsl(0, 0%, 95%);
   --primary-2: hsl(210, 15%, 95%);

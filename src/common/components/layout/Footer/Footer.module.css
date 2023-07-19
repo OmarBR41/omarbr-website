@@ -1,26 +1,61 @@
 .container {
+  --vertical-padding: 1.25rem;
+  --horizontal-padding: 2rem;
+
   width: 100%;
-  padding: 1.25rem 1rem;
+  padding: var(--vertical-padding) var(--horizontal-padding);
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+
   color: var(--secondary);
-  background-color: var(--footer-background);
+  background: var(--footer-background);
+  box-shadow: var(--footer-box-shadow);
 }
 
 .nav {
+  width: 100%;
+  max-width: 380px;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
-  flex: 2;
 }
 
-.rightContainer {
-  position: absolute;
-  right: 1rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
+@media (min-width: 560px) {
+  .container {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    --vertical-padding: 2rem;
+    --horizontal-padding: 3rem;
+
+    position: relative;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .logoContainer {
+    position: absolute;
+    top: var(--vertical-padding);
+    left: var(--horizontal-padding);
+  }
+
+  .nav {
+    justify-content: flex-end;
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    --horizontal-padding: 10vw;
+  }
 }

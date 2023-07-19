@@ -15,6 +15,7 @@
   --header-box-shadow: 0 0.5rem 0.5rem -0.25rem hsla(0, 0%, 0%, 0.1);
 
   /* --- Misc --- */
+  --footer-box-shadow: -0.5rem 0.5rem -0.25rem hsla(0, 0%, 0%, 0.1);
   --box-shadow: 0.5rem 0.5rem 0.5rem -0.25rem hsla(0, 0%, 0%, 0.1);
   --card-shadow: 0 0.25rem 0.75rem 0.25rem hsla(0, 0%, 0%, 0.2);
   --backdrop-filter: saturate(180%) blur(5px);
