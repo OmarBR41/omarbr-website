@@ -61,9 +61,9 @@ body {
 
 main {
   position: relative;
-  min-height: calc(100vh - var(--header-offset) - 2rem);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
