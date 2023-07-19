@@ -35,7 +35,11 @@ export const Header: React.FC = () => {
     <header className={styles.container} ref={ref}>
       <div className={styles.wrapper}>
         <MenuButton isNavOpen={isNavOpen} onClick={toggleNav} />
-        <Logo />
+
+        <div className={styles.logoContainer}>
+          <Logo />
+        </div>
+
         <Nav isNavOpen={isNavOpen} />
 
         <div className={styles.rightGroup}>
