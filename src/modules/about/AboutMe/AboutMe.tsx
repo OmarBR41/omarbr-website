@@ -24,8 +24,9 @@ export const AboutMe = ({ shouldShowWorkExperienceLink }: AboutMeProps) => {
 
       <div className={styles.aboutContainer}>
         <div className={styles.imageContainer}>
-          <Image alt="" fill src="/profile-pic.png" />
+          <Image alt="" className={styles.image} width={836} height={793} src="/profile-pic.png" />
         </div>
+
         <div className={styles.textContainer}>
           <p className={styles.text}>
             <Trans i18nKey="text" t={t} />

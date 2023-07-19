@@ -14,10 +14,8 @@
 }
 
 .imageContainer {
-  position: relative;
-  width: 260px;
-  height: 260px;
-  margin-bottom: 2rem;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
 }
 
 .textContainer {
@@ -49,12 +47,11 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: 3rem;
+    gap: 4rem;
   }
 
   .imageContainer {
     flex: 0 1 auto;
-    margin-top: 1.5rem;
   }
 
   .textContainer {
