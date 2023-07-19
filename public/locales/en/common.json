@@ -1,11 +1,18 @@
 {
   "title": "Software Engineer",
+
   "nav": {
     "home": "Home",
-    "about": "About me",
+    "about": "About Me",
     "contact": "Message me!",
-    "projects": "Projects"
+    "contact-form": "Contact Form",
+    "projects": "Projects",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies Notice",
+    "terms": "Terms of Use",
+    "sitemap": "Sitemap"
   },
+
   "errors": {
     "404": { "title": "404 - Page Not Found", "message": "The requested page doesn't exist, please verify the URL." },
     "500": {

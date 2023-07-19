@@ -1,11 +1,18 @@
 {
   "title": "Ingeniero de Software",
+
   "nav": {
     "home": "Inicio",
-    "about": "Sobre mí",
+    "about": "Acerca de Mí",
     "contact": "¡Platiquemos!",
-    "projects": "Proyectos"
+    "contact-form": "Contáctame",
+    "projects": "Proyectos",
+    "privacy": "Política de Privacidad",
+    "cookies": "Aviso de Cookies",
+    "terms": "Términos de Uso",
+    "sitemap": "Mapa del Sitio"
   },
+
   "errors": {
     "404": {
       "title": "404 - Página No Encontrada",
