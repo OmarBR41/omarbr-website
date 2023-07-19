@@ -1,76 +1,186 @@
 /* eslint-disable no-console */
-import { IS_DEVELOPMENT, IS_PRODUCTION } from '@/constants/environment';
+import { DEBUG_MODE, IS_DEVELOPMENT, IS_PRODUCTION } from '@/constants/environment';
 
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
 
-type EventName =
-  | 'FCP'
-  | 'LCP'
+export type EventAction =
+  // NextJS
   | 'CLS'
+  | 'FCP'
   | 'FID'
+  | 'INP'
+  | 'LCP'
   | 'TTFB'
   | 'Next.js-hydration'
   | 'Next.js-route-change-to-render'
   | 'Next.js-render'
-  | string;
+  // Errors
+  | 'Error'
+  // Nav
+  | 'Clicked Logo'
+  | 'Clicked Navigation Link'
+  | 'Clicked Contact CTA'
+  | 'Clicked Projects CTA'
+  // Sidebar
+  | 'Clicked Menu Button'
+  | 'Clicked Close Sidebar'
+  | 'Clicked Outside Sidebar'
+  | 'Opened Sidebar'
+  | 'Closed Sidebar'
+  // Theme
+  | 'Clicked Theme Toggler'
+  // Language
+  | 'Clicked Language Switcher'
+  | 'Closed Language Options'
+  | 'Changed Language'
+  // About
+  | 'Clicked Photo'
+  | 'Clicked CV'
+  | 'Clicked Github'
+  | 'Clicked LinkedIn'
+  | 'Clicked Job Card'
+  // Projects
+  | 'Clicked Project Card'
+  | 'Clicked Project Info'
+  | 'Clicked Project URL'
+  | 'Clicked Project Github'
+  // Contact
+  | 'Focused Form Field'
+  | 'Changed Form Field'
+  | 'Completed Form Field'
+  | 'Submitted Form'
+  // Misc
+  | 'Breakpoint';
+
+export type EventCategory =
+  // NextJS
+  | 'Web Vitals'
+  | 'Next.js custom metric'
+  // Common
+  | 'Header'
+  | 'Sidebar'
+  | 'Footer'
+  // Errors
+  | 'Errors - 404'
+  | 'Errors - 500'
+  // Home
+  | 'Home - Hero'
+  | 'Home - About'
+  | 'Home - Projects'
+  | 'Home - Contact'
+  // About
+  | 'About Me - Overview'
+  | 'About Me - Work Experience'
+  // Projects
+  | 'Projects - Index'
+  | 'Projects - Details'
+  // Contact
+  | 'Contact - Form'
+  | 'Contact - Links';
 
 interface Event {
-  action: EventName;
-  category: string;
+  action: EventAction;
+  category: EventCategory;
   label?: string;
   value?: number;
   [key: string]: any;
 }
 
+let canSendEvents = false;
+
 const isGtagAvailable = () => {
+  const logPrefix = '[Analytics] GTag not available: ';
+
+  if (typeof window === 'undefined') {
+    console.warn(`${logPrefix} 'window' is undefined.`);
+    return false;
+  }
+
   const isGtagInWindow = window.hasOwnProperty('gtag');
 
-  if (typeof window === 'undefined' || !isGtagInWindow) {
-    console.warn(
-      `Couldn't send event: window is of type ${typeof window} and does {isGtagInWindow ? "": "not"} have 'gtag' defined.`
-    );
-
+  if (!isGtagInWindow) {
+    console.warn(`${logPrefix} 'window' does not have 'gtag' defined as a property`);
     return false;
   }
 
   return true;
 };
 
-// https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageView = (url: string) => {
-  if (IS_DEVELOPMENT) {
-    console.log(`Sending pageView: {\n  GA_TRACKING_ID: ${GA_TRACKING_ID},\n  url: ${url}\n}`);
-  }
+export const initialSetup = () => {
+  const logPrefix = '[Analytics] GA disabled:';
 
-  if (!IS_PRODUCTION || !isGtagAvailable()) {
+  if (DEBUG_MODE) {
+    console.log(`[Analytics] GA enabled on debug mode`);
     return;
   }
 
-  window.gtag('config', GA_TRACKING_ID, {
-    page_path: url,
-  });
+  if (IS_DEVELOPMENT) {
+    console.warn(`${logPrefix} Running on development mode`);
+    return;
+  }
+
+  if (!IS_PRODUCTION) {
+    console.warn(`${logPrefix} Not running on production mode`);
+    return;
+  }
+
+  if (!isGtagAvailable()) {
+    console.warn(`${logPrefix} GTag not available`);
+    return;
+  }
+
+  canSendEvents = true;
 };
 
+const shouldSendEvent = (debugLog?: string) => {
+  if (DEBUG_MODE && debugLog) {
+    console.log(`[Analytics] ${debugLog}`);
+    return;
+  }
+
+  return canSendEvents;
+};
+
+// Runs on app's initial mount to see where they landed
+export const initialLoadEvent = (url: string) => {
+  const debugLog = `initialLoad: ${url}`;
+
+  if (shouldSendEvent(debugLog)) {
+    window.gtag('config', GA_TRACKING_ID, {
+      page_path: url,
+    });
+  }
+};
+
+// Runs on every page load
+// https://developers.google.com/analytics/devguides/collection/gtagjs/pages
+export const pageView = (url: string) => {
+  const debugLog = `pageView: ${url}`;
+
+  if (shouldSendEvent(debugLog)) {
+    window.gtag('config', GA_TRACKING_ID, {
+      page_path: url,
+    });
+  }
+};
+
+// For user events like clicks, touches, dragging, text inputs, form submission, and more.
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const event = ({ action, category, label, value, extraDimensions }: Event) => {
   const event = {
     event_category: category,
-    event_label: label,
-    value,
+    ...(label && { event_label: label }),
+    ...(value && { value }),
     ...extraDimensions,
   };
 
-  if (IS_DEVELOPMENT) {
-    console.log(
-      `Sending event: {\n  action: ${action},\n${Object.entries(event)
-        .map(([k, v]) => `  ${k}: ${v},\n`)
-        .join('')})}`
-    );
-  }
+  const debugLog = `event: {\n  action: ${action},\n${Object.entries(event)
+    .map(([k, v]) => `  ${k}: ${v},\n`)
+    .join('')})}`;
 
-  if (!IS_PRODUCTION || !isGtagAvailable()) {
-    return;
+  if (shouldSendEvent(debugLog)) {
+    window.gtag('event', action, event);
   }
-
-  window.gtag('event', action, event);
 };
+
+initialSetup();

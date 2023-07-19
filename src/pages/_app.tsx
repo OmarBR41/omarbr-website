@@ -11,7 +11,7 @@ import { ThemeProvider } from 'next-themes';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
-import * as analytics from '@/config/analytics';
+import { initialLoadEvent, event, pageView } from '@/config/analytics';
 import { Head, Main } from '@/modules/layout';
 
 import '@/common/styles/globals.css';
@@ -27,11 +27,12 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   useEffect(() => {
     document.body.classList?.remove('loading');
+    initialLoadEvent(router.asPath);
   }, []);
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      analytics.pageView(url);
+      pageView(url);
     };
     // When the component is mounted, subscribe to router changes
     // and log those page views
@@ -62,7 +63,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 };
 
 export function reportWebVitals({ id, name, label, value }: NextWebVitalsMetric) {
-  analytics.event({
+  event({
     action: name,
     category: label === 'web-vital' ? 'Web Vitals' : 'Next.js custom metric',
     label: id, // id unique to current page load
