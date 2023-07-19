@@ -17,7 +17,7 @@ export const GoBack = () => {
   };
 
   return (
-    <div className={styles.container} onClick={handleGoBack}>
+    <div className={styles.container} onClick={handleGoBack} role="button" tabIndex={0}>
       <FontAwesomeIcon className={styles.icon} icon={faArrowLeft} />
       <p className={styles.text}>{t('misc.go-back')}</p>
     </div>
