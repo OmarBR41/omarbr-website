@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { useTranslation } from 'next-i18next';
 
 import { Button } from '@/components/ui';
-import { navData } from '@/constants/navData';
+import { HEADER_NAV } from '@/constants/navData';
 
 import { NavLink } from '../NavLink';
 
@@ -19,7 +19,7 @@ const Nav = ({ isNavOpen }: NavProps) => {
   const navClasses = classNames(styles.container, { [styles.containerShown]: isNavOpen });
 
   const renderNavLinks = () =>
-    navData.map(({ id, href, icon }) => (
+    HEADER_NAV.map(({ id, href, icon }) => (
       <Fragment key={id}>
         <NavLink href={href} icon={icon} id={id} />
       </Fragment>
