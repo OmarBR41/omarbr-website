@@ -4,6 +4,7 @@ export const IS_PRODUCTION = ENV === 'production';
 export const IS_DEVELOPMENT = ENV === 'development';
 
 // Environment variables
+export const BASE_URL = process.env.BASE_URL ?? 'http://localhost:3000';
 
 export const GOOGLE_AUTH_EMAIL = process.env.GOOGLE_AUTH_EMAIL ?? '';
 export const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID ?? '';

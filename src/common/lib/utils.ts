@@ -1,3 +1,18 @@
+import { i18n } from 'next-i18next';
+
+import { BASE_URL } from './constants';
+
+export const getBaseUrlWithLocale = () => {
+  const lang = i18n?.language;
+  const isEng = lang === 'en';
+
+  if (isEng) {
+    return BASE_URL;
+  }
+
+  return `${BASE_URL}/${lang}`;
+};
+
 export const randomRange = (min: number, max: number) => Math.random() * (max - min) + min;
 
 export const shuffleArray = (arr: any[]) => {

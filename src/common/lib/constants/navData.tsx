@@ -41,7 +41,7 @@ export const FOOTER_NAV_RIGHT = [
     id: 'cookies',
   },
   {
-    href: '/sitemap',
+    href: '/sitemap.xml',
     id: 'sitemap',
   },
 ];
