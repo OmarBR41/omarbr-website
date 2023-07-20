@@ -1,8 +1,6 @@
 /* eslint-disable react/no-danger */
-import Script from 'next/script';
-
 export const GTagDefaultConsent = () => (
-  <Script
+  <script
     dangerouslySetInnerHTML={{
       __html: `
           // Define dataLayer and the gtag function.
@@ -18,6 +16,5 @@ export const GTagDefaultConsent = () => (
           `,
     }}
     id="gtag-default"
-    strategy="afterInteractive"
   />
 );
