@@ -11,11 +11,11 @@ import { ThemeProvider } from 'next-themes';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
-import { initialLoadEvent, event, pageView } from '@/config/analytics';
+import { initialLoadEvent, initialSetup, event, pageView } from '@/config/analytics';
 import { Head, Main } from '@/modules/layout';
+import { DEBUG_MODE } from '@/common/lib/constants';
 
 import '@/common/styles/globals.css';
-import { DEBUG_MODE } from '@/common/lib/constants';
 
 config.autoAddCss = false;
 
@@ -29,6 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     document.body.classList?.remove('loading');
     initialLoadEvent(router.asPath);
+    initialSetup();
   }, []);
 
   useEffect(() => {

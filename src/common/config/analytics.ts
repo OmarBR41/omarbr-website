@@ -189,5 +189,3 @@ export const event = ({ action, category, label, value, extraDimensions }: Event
     window.gtag('event', action, event);
   }
 };
-
-initialSetup();
