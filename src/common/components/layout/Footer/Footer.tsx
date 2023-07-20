@@ -10,7 +10,7 @@ import styles from './Footer.module.css';
 export const Footer: React.FC = () => (
   <footer className={styles.container}>
     <div className={styles.logoContainer}>
-      <Logo />
+      <Logo eventCategory="Footer" />
     </div>
 
     <nav className={styles.nav}>
