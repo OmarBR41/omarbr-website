@@ -3,6 +3,7 @@
   --image-size-halved: calc(var(--image-size) / 2);
 
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
