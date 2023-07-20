@@ -8,26 +8,33 @@
   <a href="https://linkedin.com/in/omarbr41">LinkedIn</a>
 </div>
 
-# NextJS Boilerplate
+Hi! This is my personal website, :space_invader: where I showcase my experience, career, projects, and more.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped from a personal [nextjs-boilerplate](http://nextjs.org).
-
-## Stack
+## Technologies
 
 - ReactJS
 - NextJS
 - TypeScript
 - CSS3
+- i18n
+- Google Analytics
 - Prettier
 - ESLint
 
-## Getting Started
+## Contact
 
-After cloning this project, just install the dependencies and run the development server:
+If you have any advice or question, feel free to [contact me](https://omarbr.com/contact-me/)!
 
-```bash
-npm install
-npm run dev
-```
+:email: omar.benavides.rmz@gmail.com
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Open Source
+
+This project is open-source! You can clone or fork the repository, or just view its contents.
+
+To set it up locally:
+- Copy the contents of `.env.example` to a new file `.env.local`
+  - DON'T COMMIT THIS FILE
+  - To run the app on a specific port, add `PORT=3000`
+  - To enable debug mode, add `DEBUG_MDDE=1`
+  - Fill your own Mail and Analytics values
+- Run `npm run dev` and visit `http://localhost:3000`
