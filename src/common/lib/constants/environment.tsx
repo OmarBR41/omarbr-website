@@ -8,8 +8,6 @@ export const DEBUG_MODE = Boolean(process.env.DEBUG_MODE) || IS_DEVELOPMENT || f
 // Environment variables
 export const BASE_URL = process.env.BASE_URL ?? 'http://localhost:3000';
 
+// Gmail IAM settings
 export const GOOGLE_AUTH_EMAIL = process.env.GOOGLE_AUTH_EMAIL ?? '';
-export const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID ?? '';
-export const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET ?? '';
-export const GOOGLE_REFRESH_TOKEN = process.env.GOOGLE_REFRESH_TOKEN ?? '';
-export const GOOGLE_ACCESS_TOKEN = process.env.GOOGLE_ACCESS_TOKEN ?? '';
+export const GOOGLE_AUTH_PASS = process.env.GOOGLE_AUTH_PASS ?? '';
