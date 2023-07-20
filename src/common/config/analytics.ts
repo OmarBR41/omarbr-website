@@ -44,9 +44,7 @@ export type EventAction =
   | 'Clicked Job Logo'
   // Projects
   | 'Clicked Project Card'
-  | 'Clicked Project Info'
-  | 'Clicked Project URL'
-  | 'Clicked Project Github'
+  | 'Clicked Project Icon'
   // Contact
   | 'Focused Form Field'
   | 'Changed Form Field'
@@ -75,8 +73,9 @@ export type EventCategory =
   | 'About Me - Overview'
   | 'About Me - Work Experience'
   // Projects
-  | 'Projects - Index'
-  | 'Projects - Details'
+  | 'Projects Index'
+  | 'Project Details'
+  | 'Other Projects'
   // Contact
   | 'Contact - Form'
   | 'Contact - Links';

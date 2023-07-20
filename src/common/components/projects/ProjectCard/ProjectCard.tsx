@@ -2,9 +2,11 @@ import React from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { type Project } from '@/lib/constants/projects';
 import { InDevelopment } from '@/components/ui/InDevelopment';
+import { event } from '@/common/config/analytics';
 
 import { StackBadges } from '../StackBadges';
 import { ProjectIcons } from '../ProjectIcons';
@@ -17,12 +19,39 @@ interface ProjectCardProps extends Project {
 }
 
 const ProjectCard = ({ id, url, title, description, stack, repoUrl, isInDevelopment }: ProjectCardProps) => {
+  const { route } = useRouter();
+
   const projectUrl = `/projects/${id}`;
+
+  const onClick = () => {
+    const category = (() => {
+      switch (route) {
+        case '/':
+          return 'Home - Projects';
+        case '/projects':
+          return 'Projects Index';
+        case '/projects/[id]':
+          return 'Other Projects';
+        default:
+          return null;
+      }
+    })();
+
+    if (!category) {
+      return;
+    }
+
+    event({
+      action: 'Clicked Project Card',
+      category,
+      label: id,
+    });
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.topContainer}>
-        <Link href={projectUrl}>
+        <Link href={projectUrl} onClick={onClick}>
           <div className={styles.imageContainer}>
             <Image
               alt={title}
