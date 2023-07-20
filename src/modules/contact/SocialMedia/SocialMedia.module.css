@@ -23,6 +23,10 @@
   border-top: 1px solid var(--accent-3);
 }
 
+.container > * {
+  flex: 0 1 auto;
+}
+
 .cvIcon {
   color: var(--red-bright);
 }
