@@ -1,9 +1,10 @@
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import { useTranslation } from 'next-i18next';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { FieldError, FormError, Input, InputGroup, Label, Submit, TextArea, ThankYou } from '@/components/form';
+import { event, type EventCategory } from '@/config/analytics';
 
 import styles from './ContactForm.module.css';
 
@@ -36,7 +37,7 @@ const registerOptions = {
   },
 };
 
-export const ContactForm: React.FC = () => {
+export const ContactForm = ({ eventCategory = 'Contact - Form' }: { eventCategory?: EventCategory }) => {
   const { t } = useTranslation('contact');
 
   const [isSending, setIsSending] = useState(false);
@@ -47,14 +48,19 @@ export const ContactForm: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
-    getValues,
     reset,
+    getFieldState,
   } = useForm<Inputs>({
     defaultValues: DEFAULT_INPUT_VALUES,
     mode: 'onChange',
   });
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    event({
+      action: 'Sending Form',
+      category: eventCategory,
+    });
+
     try {
       setIsSending(true);
       setIsSent(false);
@@ -72,20 +78,90 @@ export const ContactForm: React.FC = () => {
       const res = await fetch('/api/contact', fetchOptions);
 
       if (res.ok) {
+        event({
+          action: 'Sent Form',
+          category: eventCategory,
+        });
+
         setIsSent(true);
         reset();
       }
 
       if (res.status === 400 || res.status === 500) {
+        event({
+          action: 'Failed Form',
+          category: eventCategory,
+          label: `response: ${res.status}`,
+        });
+
         setErrorSending(true);
       }
     } catch (err: any) {
+      event({
+        action: 'Sent Form',
+        category: eventCategory,
+        label: String(err),
+      });
+
       console.error(err.message);
+
       setErrorSending(true);
     } finally {
       setIsSending(false);
     }
   };
+
+  const onFieldFocus = (id: InputType) => {
+    event({
+      action: 'Focused Form Field',
+      category: eventCategory,
+      label: id,
+    });
+  };
+
+  const onFieldBlur = (id: InputType) => {
+    const { invalid, isDirty } = getFieldState(id);
+
+    if (isDirty) {
+      event({
+        action: 'Changed Form Field',
+        category: eventCategory,
+        label: id,
+      });
+    }
+
+    if (invalid) {
+      event({
+        action: 'Invalid Form Field',
+        category: eventCategory,
+        label: id,
+      });
+    }
+
+    event({
+      action: 'Unfocused Form Field',
+      category: eventCategory,
+      label: id,
+    });
+  };
+
+  const onSubmitClick = () => {
+    event({
+      action: 'Submitted Form',
+      category: eventCategory,
+    });
+  };
+
+  const onInvalidSubmit = useCallback(
+    (errorFields: object) => {
+      event({
+        action: 'Failed Form',
+        category: eventCategory,
+        label: `errors > [${Object.keys(errorFields).join(', ')}]`,
+      });
+    },
+    [errors]
+  );
 
   const renderField = (id: InputType) => {
     const fieldPlaceholder = t(`form.${id}.placeholder`);
@@ -98,6 +174,8 @@ export const ContactForm: React.FC = () => {
           placeholder={fieldPlaceholder}
           register={register}
           registerOptions={registerOptions[id]}
+          onFocus={() => onFieldFocus(id)}
+          onBlur={() => onFieldBlur(id)}
         />
       );
     }
@@ -109,12 +187,14 @@ export const ContactForm: React.FC = () => {
         placeholder={fieldPlaceholder}
         register={register}
         registerOptions={registerOptions[id]}
+        onFocus={() => onFieldFocus(id)}
+        onBlur={() => onFieldBlur(id)}
       />
     );
   };
 
   const renderInputFields = () => {
-    const fields = Object.keys(getValues());
+    const fields = Object.keys(DEFAULT_INPUT_VALUES);
 
     return (fields as InputType[]).map((id) => {
       const fieldLabel = t(`form.${id}.label`);
@@ -144,10 +224,10 @@ export const ContactForm: React.FC = () => {
   }, [errorSending, isSending, t]);
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit, onInvalidSubmit)}>
       {renderInputFields()}
 
-      <Submit isDisabled={isSending} label={submitLabel} />
+      <Submit isDisabled={isSending} label={submitLabel} onClick={onSubmitClick} />
 
       {isSent && <ThankYou />}
       {errorSending && <FormError />}

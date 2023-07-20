@@ -9,13 +9,14 @@ import styles from './Submit.module.css';
 interface SubmitProps {
   label: string;
   isDisabled: boolean;
+  onClick?: () => unknown;
 }
 
-export const Submit = ({ label, isDisabled }: SubmitProps) => {
+export const Submit = ({ label, isDisabled, onClick }: SubmitProps) => {
   const submitClasses = classNames(styles.container, { [styles.containerDisabled]: isDisabled });
 
   return (
-    <Button disabled={isDisabled} extraClassNames={submitClasses} type="submit">
+    <Button disabled={isDisabled} extraClassNames={submitClasses} type="submit" onClick={onClick}>
       {label}
     </Button>
   );

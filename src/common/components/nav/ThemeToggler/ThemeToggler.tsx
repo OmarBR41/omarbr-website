@@ -5,18 +5,28 @@ import { useTheme } from 'next-themes';
 import { faMoon, faSun, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { event } from '@/config/analytics';
+
 import styles from './ThemeToggler.module.css';
 
 const ThemeToggler = () => {
   const [themeIcon, setThemeIcon] = useState<IconDefinition>(faSun);
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     setThemeIcon(resolvedTheme === 'dark' ? faMoon : faSun);
   }, [resolvedTheme]);
 
   const toggleTheme = () => {
-    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+    const newTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+
+    event({
+      action: 'Clicked Theme Toggler',
+      category: 'Header',
+      label: `${theme} > ${newTheme}`,
+    });
+
+    setTheme(newTheme);
   };
 
   return (

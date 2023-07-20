@@ -11,8 +11,8 @@ const ContactMe = () => {
   return (
     <>
       <Head title={PAGE_TITLE} />
-      <ContactSection />
-      <SocialMedia />
+      <ContactSection eventCategory={'Contact - Form'} />
+      <SocialMedia eventCategory={'Contact - Links'} />
     </>
   );
 };

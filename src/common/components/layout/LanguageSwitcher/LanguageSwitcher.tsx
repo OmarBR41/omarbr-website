@@ -6,9 +6,12 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
 import { Flag } from '@/components/ui';
-import { useOnClickOutside } from '@/lib/hooks';
+import { event } from '@/config/analytics';
+import { useOnClickOutside, useUpdateEffect } from '@/lib/hooks';
 
 import styles from './LanguageSwitcher.module.css';
+
+const HEADER_EVENT_CATEGORY = 'Header';
 
 export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -20,9 +23,36 @@ export const LanguageSwitcher = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const ref = useRef(null);
-  useOnClickOutside(ref, () => setIsDropdownOpen(false));
+
+  useOnClickOutside(ref, () => {
+    if (!isDropdownOpen) {
+      return;
+    }
+
+    event({
+      action: 'Clicked Outside Language Options',
+      category: HEADER_EVENT_CATEGORY,
+    });
+
+    setIsDropdownOpen(false);
+  });
+
+  useUpdateEffect(() => {
+    const action = isDropdownOpen ? 'Opened Language Options' : 'Closed Language Options';
+
+    event({
+      action,
+      category: HEADER_EVENT_CATEGORY,
+    });
+  }, [isDropdownOpen]);
 
   const toggleDropdown = () => {
+    event({
+      action: 'Clicked Language Switcher',
+      category: HEADER_EVENT_CATEGORY,
+      label: currentLanguage,
+    });
+
     setIsDropdownOpen((prevState) => !prevState);
   };
 
@@ -39,6 +69,13 @@ export const LanguageSwitcher = () => {
     async (newLocale: string) => {
       setCurrent(newLocale);
       await switchToLocale(newLocale);
+
+      event({
+        action: 'Changed Language',
+        category: HEADER_EVENT_CATEGORY,
+        label: `${currentLanguage} > ${newLocale}`,
+      });
+
       setIsDropdownOpen(false);
     },
     [switchToLocale]

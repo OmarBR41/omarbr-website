@@ -1,6 +1,8 @@
 /* eslint-disable react/no-danger */
+import Script from 'next/script';
+
 export const GTagConsentGranted = () => (
-  <script
+  <Script
     dangerouslySetInnerHTML={{
       __html: `
         gtag('consent', 'update', {
@@ -10,5 +12,6 @@ export const GTagConsentGranted = () => (
       `,
     }}
     id="gtag-granted"
+    strategy="afterInteractive"
   />
 );

@@ -24,7 +24,7 @@ const ProjectPage = ({ id }: ProjectPageProps) => {
         <>
           <ProjectDetails id={id} />
           <OtherProjects excludedId={id} />
-          <ContactSection />
+          <ContactSection eventCategory="Project Details" />
           <SocialMedia />
         </>
       )}

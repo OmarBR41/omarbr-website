@@ -9,10 +9,11 @@ interface SocialMediaIconProps {
   id: string;
   icon: IconProp;
   url: string;
+  onClick?: () => unknown;
 }
 
-export const SocialMediaIcon = ({ id, icon, url }: SocialMediaIconProps) => (
-  <a className={styles.icon} href={url} key={id} target="_blank">
+export const SocialMediaIcon = ({ id, icon, url, onClick }: SocialMediaIconProps) => (
+  <a className={styles.icon} href={url} key={id} target="_blank" onClick={onClick}>
     <FontAwesomeIcon icon={icon} />
   </a>
 );

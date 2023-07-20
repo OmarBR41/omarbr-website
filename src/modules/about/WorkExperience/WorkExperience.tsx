@@ -8,6 +8,7 @@ import { WORK_EXPERIENCE } from '@/constants/jobs';
 import { slugify } from '@/lib/utils';
 
 import styles from './WorkExperience.module.css';
+import { event } from '@/common/config/analytics';
 
 export const WorkExperience = () => {
   const { t, i18n } = useTranslation('about');
@@ -22,15 +23,31 @@ export const WorkExperience = () => {
     return `${startDateLocalized} - ${endDateLocalized}`;
   };
 
+  const onLogoClick = (id: string) => {
+    event({
+      action: 'Clicked Job Logo',
+      category: 'About Me - Work Experience',
+      label: id,
+    });
+  };
+
+  const onCardClick = (id: string) => {
+    event({
+      action: 'Clicked Job Card',
+      category: 'About Me - Work Experience',
+      label: id,
+    });
+  };
+
   const renderJobsTimeline = useCallback(
     () =>
       WORK_EXPERIENCE.map(({ companyName, companyLogoUrl, jobTitle, startDate, endDate }) => (
         <div className={styles.timelineBlock} key={companyName}>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer} onClick={() => onLogoClick(companyName)}>
             <Image className={styles.image} src={companyLogoUrl} width={20} height={20} alt={`${companyName}'s logo`} />
           </div>
 
-          <div className={styles.timelineContent}>
+          <div className={styles.timelineContent} onClick={() => onCardClick(companyName)}>
             <div className={styles.headerContainer}>
               <h3 className={styles.companyName}>{companyName}</h3>
               <p className={styles.dates}>{formatWorkDateRange(startDate, endDate)}</p>

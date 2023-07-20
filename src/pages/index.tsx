@@ -15,9 +15,9 @@ const Home = () => {
     <>
       <Head title={PAGE_TITLE} />
       <Hero />
-      <AboutMe shouldShowWorkExperienceLink />
+      <AboutMe eventCategory="Home - About" shouldShowWorkExperienceLink />
       <ProjectsSection />
-      <ContactSection />
+      <ContactSection eventCategory="Home - Contact" />
     </>
   );
 };
