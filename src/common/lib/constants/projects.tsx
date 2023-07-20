@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
       // 'digitalocean'
     ],
     url: 'https://omarbr.com',
-    // repoUrl: 'https://github.com/OmarBR41/omarbr',
+    repoUrl: 'https://github.com/OmarBR41/omarbr-website',
   },
   {
     id: 'auth-passport-jwt',
