@@ -47,9 +47,14 @@ export type EventAction =
   | 'Clicked Project Icon'
   // Contact
   | 'Focused Form Field'
+  | 'Unfocused Form Field'
   | 'Changed Form Field'
+  | 'Invalid Form Field'
   | 'Completed Form Field'
   | 'Submitted Form'
+  | 'Sending Form'
+  | 'Failed Form'
+  | 'Sent Form'
   // Misc
   | 'Breakpoint';
 

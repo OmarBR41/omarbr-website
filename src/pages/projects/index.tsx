@@ -13,7 +13,7 @@ const ProjectsIndexPage = () => {
     <>
       <Head title={PAGE_TITLE} />
       <ProjectsSection />
-      <ContactSection />
+      <ContactSection eventCategory="Projects Index" />
       <SocialMedia />
     </>
   );

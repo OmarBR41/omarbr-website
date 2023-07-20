@@ -17,7 +17,7 @@ const Home = () => {
       <Hero />
       <AboutMe eventCategory="Home - About" shouldShowWorkExperienceLink />
       <ProjectsSection />
-      <ContactSection />
+      <ContactSection eventCategory="Home - Contact" />
     </>
   );
 };
