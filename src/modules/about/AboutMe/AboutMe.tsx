@@ -10,13 +10,26 @@ import { LinkWithIcon, Title } from '@/components/ui';
 import { SocialMedia } from '@/modules/contact/SocialMedia';
 
 import styles from './AboutMe.module.css';
+import { type EventCategory, event } from '@/common/config/analytics';
 
 interface AboutMeProps {
+  eventCategory?: EventCategory;
   shouldShowWorkExperienceLink?: boolean;
 }
 
-export const AboutMe = ({ shouldShowWorkExperienceLink }: AboutMeProps) => {
+export const AboutMe = ({ eventCategory, shouldShowWorkExperienceLink }: AboutMeProps) => {
   const { t } = useTranslation('about');
+
+  const onCTAClick = () => {
+    if (!eventCategory) {
+      return;
+    }
+
+    event({
+      action: 'Clicked Work Experience CTA',
+      category: eventCategory,
+    });
+  };
 
   return (
     <section className={styles.container}>
@@ -31,10 +44,16 @@ export const AboutMe = ({ shouldShowWorkExperienceLink }: AboutMeProps) => {
           <p className={styles.text}>
             <Trans i18nKey="text" t={t} />
           </p>
-          <SocialMedia />
+
+          <SocialMedia eventCategory={eventCategory} />
 
           {shouldShowWorkExperienceLink && (
-            <LinkWithIcon href="/about-me#work-experience" text={t('see-work-experience')} icon={faArrowRight} />
+            <LinkWithIcon
+              href="/about-me#work-experience"
+              text={t('see-work-experience')}
+              icon={faArrowRight}
+              onClick={onCTAClick}
+            />
           )}
         </div>
       </div>

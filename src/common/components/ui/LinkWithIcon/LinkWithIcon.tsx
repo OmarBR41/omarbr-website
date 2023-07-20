@@ -10,11 +10,12 @@ interface LinkWithIconProps {
   href: string;
   text: string;
   icon: any;
+  onClick?: () => unknown;
 }
 
-const LinkWithIcon = ({ href, text, icon }: LinkWithIconProps) => {
+const LinkWithIcon = ({ href, text, icon, onClick }: LinkWithIconProps) => {
   return (
-    <Link href={href} className={styles.container}>
+    <Link href={href} className={styles.container} onClick={onClick}>
       {text}
       <FontAwesomeIcon icon={icon} />
     </Link>

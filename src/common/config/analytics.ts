@@ -36,11 +36,12 @@ export type EventAction =
   | 'Closed Language Options'
   | 'Changed Language'
   // About
-  | 'Clicked Photo'
   | 'Clicked CV'
   | 'Clicked Github'
   | 'Clicked LinkedIn'
+  | 'Clicked Work Experience CTA'
   | 'Clicked Job Card'
+  | 'Clicked Job Logo'
   // Projects
   | 'Clicked Project Card'
   | 'Clicked Project Info'
