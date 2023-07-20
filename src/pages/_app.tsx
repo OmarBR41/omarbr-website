@@ -15,6 +15,7 @@ import { initialLoadEvent, event, pageView } from '@/config/analytics';
 import { Head, Main } from '@/modules/layout';
 
 import '@/common/styles/globals.css';
+import { DEBUG_MODE } from '@/common/lib/constants';
 
 config.autoAddCss = false;
 
@@ -63,6 +64,11 @@ const App = ({ Component, pageProps }: AppProps) => {
 };
 
 export function reportWebVitals({ id, name, label, value }: NextWebVitalsMetric) {
+  // Avoid log clutter while debugging
+  if (DEBUG_MODE) {
+    return;
+  }
+
   event({
     action: name,
     category: label === 'web-vital' ? 'Web Vitals' : 'Next.js custom metric',
