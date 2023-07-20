@@ -9,13 +9,13 @@
     "title": "David Camporredondo",
     "subtitle": "A Musician's Portfolio",
     "description": "David is a Mexican guitarist that offers online classes of guitar, piano, and music theory. His page showcases his YouTube videos, his experience as a musician and teacher, and the content of his lessons.",
-    "architecture": "This website was built with NextJS, the web framework of ReactJS, since it helps us optimizing the SEO and performance of the web app."
+    "architecture": "This website was developed with NextJS, ReactJS, and TailwindCSS. It has Google Analytics integrated to monitor user traffic, and a contact form that sends an email to David using Nodemailer, and saves the information in a Spreadsheet using the Google API."
   },
   "wobsgg": {
     "title": "WobsGG Shop",
     "subtitle": "NGC Controllers eCommerce",
     "description": "WobsGG is a business dedicated to the customization and internal modification of Nintendo GameCube Controllers for Smash. This online shop lets users buy the perfect controller for them, and they can save their favorite products for later or share it with their friends. The admin also has the freedom to manage all their products, orders, and more through their personal dashboard.",
-    "architecture": "ReactJS."
+    "architecture": "This project is still in development, but the frontend is being built with NextJS, TypeScript, MUI, and GraphQL, while the backend will be Saleor with PostgreSQL and GraphQL."
   },
   "auth-passport-jwt": {
     "title": "JWT Authentication",
@@ -26,13 +26,13 @@
   "ip-address-tracker": {
     "title": "IP Info & Location",
     "subtitle": "IP Info & Location",
-    "description": "This web app uses a public API to show an IP's information, including its geo coords, which are later used by Leaflet to render a map showing the location of the requested IP.",
-    "architecture": "ReactJS."
+    "description": "This project is a Frontend Mentor exercise designed to test the usage of Maps with Leaflet and APIs.",
+    "architecture": "This web app was developed with ReactJS and CSS3, consuming a public API to display information about an IP, including its geographic coordinates, which are used by Leaflet to show the IP's location on a map."
   },
   "omarbr": {
     "title": "OmarBR",
-    "subtitle": "My Portfolio!",
+    "subtitle": "My Portfolio",
     "description": "This is the website you're currently in! It's my portfolio where I'll display my projects, write about my career, and maybe start a blog someday.",
-    "architecture": "ReactJS."
+    "architecture": "Developed with NextJS, ReactJS, TypeScript, and CSS3, this site is multilingual, SEO-friendly, and integrated with Google Analytics."
   }
 }
