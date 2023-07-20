@@ -24,6 +24,7 @@ export const NavLink = ({ href, id, icon }: NavLinkProps) => {
     event({
       action: 'Clicked Navigation Link',
       category,
+      label: href,
     });
   };
 
