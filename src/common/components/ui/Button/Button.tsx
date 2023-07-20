@@ -17,7 +17,7 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<'button'>, ExtraCla
   children?: any;
   href?: string;
   isTargetExternal?: boolean;
-  onClick?: () => {};
+  onClick?: () => unknown;
   variant?: ButtonVariant;
 }
 
