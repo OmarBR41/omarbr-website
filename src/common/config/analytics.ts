@@ -31,6 +31,8 @@ export type EventAction =
   | 'Clicked Theme Toggler'
   // Language
   | 'Clicked Language Switcher'
+  | 'Clicked Outside Language Options'
+  | 'Opened Language Options'
   | 'Closed Language Options'
   | 'Changed Language'
   // About
