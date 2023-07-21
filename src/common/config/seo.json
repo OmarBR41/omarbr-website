@@ -8,7 +8,16 @@
     "type": "website",
     "locale": "en_US",
     "url": "https://omarbr.com",
-    "site_name": "Omar BR"
+    "site_name": "Omar BR",
+    "images": [
+      {
+        "title": "Omar BR",
+        "alt": "Omar BR's personal portfolio",
+        "width": 2880,
+        "height": 1762,
+        "url": "https://omarbr.com/projects/omarbr/monitor.png"
+      }
+    ]
   },
   "twitter": {
     "cardType": "summary_large_image"

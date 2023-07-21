@@ -5,7 +5,7 @@ import NextHead from 'next/head';
 
 import { DefaultSeo } from 'next-seo';
 
-import { GAScripts } from '@/components/seo';
+import { GAScripts, ogImage, type OgImageProps } from '@/components/seo';
 import seoConfigJson from '@/config/seo.json';
 
 interface SEOProps {
@@ -20,6 +20,7 @@ interface SEOProps {
     locale?: string;
     url?: string;
     site_name?: string;
+    images?: OgImageProps[];
   };
 }
 
@@ -62,6 +63,10 @@ export const Head: React.FC<SEOProps> = ({ title, description, openGraph, robots
       <meta content="width=device-width, initial-scale=1" key="viewport" name="viewport" />
       {/* Favicon */}
       <link href="/favicon/favicon.ico" rel="icon" sizes="any" />
+      {/* OGImages */}
+      {openGraph?.images?.length
+        ? openGraph.images.map((img, index) => ogImage(img, index))
+        : ogImage(seoConfigJson.openGraph.images[0], 0)}
 
       {/* Content */}
       {children}
