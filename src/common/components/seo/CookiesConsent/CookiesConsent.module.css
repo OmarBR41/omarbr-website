@@ -29,32 +29,31 @@
 
 .denyButton {
   margin-bottom: 0.25rem;
-  color: var(--accent-3);
   font-size: 0.8rem;
 }
 
 .button {
   padding: 0.5rem 0.75rem;
-  color: var(--accent-2);
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
-  background-color: var(--violet);
+  color: var(--text-primary);
+  background-color: var(--blue);
   border: 1px solid transparent;
   border-radius: var(--border-radius);
   white-space: nowrap;
 }
 
 .button:hover {
-  background-color: var(--violet-dark);
+  background-color: var(--blue-dark);
 }
 
 .button:focus {
-  outline-color: var(--violet);
+  background-color: var(--blue-darker);
 }
 
 .button:active {
-  color: var(--accent-6);
+  background-color: var(--blue-darkest);
 }
 
 .closeButton {
@@ -62,17 +61,22 @@
   top: 0.5rem;
   right: 0.5rem;
   font-weight: 300;
-
-  color: var(--accent-3);
   transform: rotate(45deg);
 }
 
-.closeButton:hover {
-  color: var(--accent-2);
+.closeButton,
+.denyButton {
+  color: var(--accent-5);
+}
+
+.closeButton:hover,
+.denyButton:hover {
+  color: var(--accent-4);
 }
 
 .closeButton:focus,
-.closeButton:active {
-  color: var(--accent-1);
-  outline: none;
+.closeButton:active,
+.denyButton:focus,
+.denyButton:active {
+  color: var(--accent-3);
 }

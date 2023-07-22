@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Footer, Header } from '@/components/layout';
+import { CookiesConsent } from '@/components/seo/CookiesConsent';
 
 import styles from './Main.module.css';
 
@@ -13,6 +14,7 @@ export const Main = ({ children }: MainProps) => (
     <Header />
     <main>{children}</main>
     <Footer />
+    <CookiesConsent />
   </div>
 );
 

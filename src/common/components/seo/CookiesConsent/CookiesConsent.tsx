@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { deleteCookie, getCookie, getCookies, hasCookie, setCookie } from 'cookies-next';
+import { useTranslation } from 'next-i18next';
 
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +10,7 @@ import styles from './CookiesConsent.module.css';
 
 export const CookiesConsent = () => {
   const [shouldShow, setShouldShow] = useState(false);
+  const { t } = useTranslation();
 
   const acceptCookie = () => {
     setShouldShow(false);
@@ -56,7 +58,7 @@ export const CookiesConsent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <p className={styles.text}>This website uses cookies to improve the user experience.</p>
+        <p className={styles.text}>{t('')}</p>
         <button
           className={styles.denyButton}
           onClick={() => {
