@@ -3,36 +3,36 @@
   "other-projects": "Other Projects",
   "more-projects": "More Projects",
   "in-development": "In Development",
-  "open-source-project": "This project is open source! You can look at the code through its GitHub repository by clicking the icon below.",
+  "open-source-project": "This project is open source! Check out the code in GitHub.",
 
   "david-camporredondo": {
     "title": "David Camporredondo",
-    "subtitle": "A Musician's Portfolio",
-    "description": "David is a Mexican guitarist that offers online classes of guitar, piano, and music theory. His page showcases his YouTube videos, his experience as a musician and teacher, and the content of his lessons.",
-    "architecture": "This website was developed with NextJS, ReactJS, and TailwindCSS. It has Google Analytics integrated to monitor user traffic, and a contact form that sends an email to David using Nodemailer, and saves the information in a Spreadsheet using the Google API."
+    "subtitle": "Musician Portfolio",
+    "description": "David is a Mexican musician and teacher proficient in guitar and music theory. He offers online classes of guitar, piano, and music theory, composition and production, from total beginners to advanced musicians of all ages. His page showcases his YouTube videos, his experience as a musician and a teacher, and the content of his lessons.",
+    "architecture": "This website was developed using HTML5, JS (ES6), NextJS, ReactJS, and TailwindCSS. It has Google Analytics integrated to monitor user traffic, and a contact form so users can contact David via email using Nodemailer, saving the information in a private Spreadsheet using Google's API."
   },
   "wobsgg": {
     "title": "WobsGG Shop",
     "subtitle": "NGC Controllers eCommerce",
-    "description": "WobsGG is a business dedicated to the customization and internal modification of Nintendo GameCube Controllers for Smash. This online shop lets users buy the perfect controller for them, and they can save their favorite products for later or share it with their friends. The admin also has the freedom to manage all their products, orders, and more through their personal dashboard.",
-    "architecture": "This project is still in development, but the frontend is being built with NextJS, TypeScript, MUI, and GraphQL, while the backend will be Saleor with PostgreSQL and GraphQL."
+    "description": "WobsGG is a business dedicated to the customization and internal modification of Nintendo GameCube Controllers for competitive Smash players. His controllers are top quality and does custom designs and modifies them functionally to improve performance, lifetime and consistency.",
+    "architecture": "This project consists of multiple microservices running on Digital Ocean using Docker Compose.<br/><br/>The frontend is built with HTML5, JS (ES6), NextJS, TypeScript, TailwindCSS, and GraphQL.<br/><br/>The backend is Saleor, a Django e-commerce open-source app connected to a PostgreSQL database, exposing a GraphQL API for the frontend.<br/><br/>The website has a shopping cart, contact form, order status tracking, a checkout powered by Stripe, and the admin is able to manage all their products, orders, customers, and more data through a private dashboard.<br/><br/>Other microservices used are Traefik as a proxy to secure the webserver, Umami for user analytics, Glitchtip as error monitoring tool, Redis for caching and session storage."
   },
   "auth-passport-jwt": {
     "title": "JWT Authentication",
     "subtitle": "JWT Authentication",
-    "description": "A fullstack app of how to securely add JWT authentication with persisting session to a React app using a NodeJS server using ExpressJS.",
-    "architecture": "This app's frontend is built with ReactJS, handling the app's global state with Redux and LocalStorage to keep a persistent session. In the design I used Tailwind CSS to experiment with its design system's simplicity and consistency.<br/><br/>The backend is an ExpressJS server on NodeJS as an API using GraphQL, letting the frontend register users to a MongoDB database using Passport and JWT to keep a secure authentication. Users can also log in securely and request a password reset."
+    "description": "An example fullstack app where users can register and log in securely, and request a password reset, secured using JWT authentication with persisting session.<br/><br/>The test user/pass is admin/admin.",
+    "architecture": "This app's frontend is built with ReactJS, TailwindCSS, Redux and LocalStorage to keep a persistent session. The backend is an ExpressJS server on NodeJS exposing a GraphQL API on a MongoDB database, securing the data with Passport and JWT for a secure authentication."
   },
   "ip-address-tracker": {
     "title": "IP Info & Location",
     "subtitle": "IP Info & Location",
-    "description": "This project is a Frontend Mentor exercise designed to test the usage of Maps with Leaflet and APIs.",
-    "architecture": "This web app was developed with ReactJS and CSS3, consuming a public API to display information about an IP, including its geographic coordinates, which are used by Leaflet to show the IP's location on a map."
+    "description": "This project is a Frontend Mentor exercise designed to test the usage of Maps with Leaflet and IP data.",
+    "architecture": "Web app developed with ReactJS and CSS3, consuming a public API to display information about the requested IP, including its geographic coordinates, which are then used by Leaflet to show the IP's location on a map."
   },
   "omarbr": {
     "title": "OmarBR",
-    "subtitle": "My Portfolio",
-    "description": "This is the website you're currently in! It's my portfolio where I'll display my projects, write about my career, and maybe start a blog someday.",
+    "subtitle": "This Website!",
+    "description": "My personal portfolio. :) Here I display some of my projects, write about my experience & career, and include a contact form if you want to hire me or chat with me!",
     "architecture": "Developed with NextJS, ReactJS, TypeScript, and CSS3, this site is multilingual, SEO-friendly, and integrated with Google Analytics."
   }
 }

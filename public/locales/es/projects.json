@@ -3,36 +3,36 @@
   "other-projects": "Otros Proyectos",
   "more-projects": "Más Proyectos",
   "in-development": "En Desarrollo",
-  "open-source-project": "¡Este proyecto es open source! Puedes ver el código en su repositorio de GitHub dando click al ícono debajo.",
+  "open-source-project": "¡Este proyecto es open source! Checa el código en GitHub.",
 
   "david-camporredondo": {
     "title": "David Camporredondo",
-    "subtitle": "Portafolio de un Músico",
-    "description": "David es un guitarrista mexicano que ofrece clases en línea de guitarra, piano, y teoría musical. Su página muestra sus videos de YouTube, su experiencia como músico y maestro, y el contenido de sus clases.",
-    "architecture": "Este sitio web fue desarrollado con NextJS, ReactJS y TailwindCSS. Tiene integrado Google Analytics para monitorear el tráfico de usuarios, y un formulario de contacto que le envía un correo a David usando Nodemailer, y guarda la información en un SpreadSheet usando el API de Google."
+    "subtitle": "Portafolio de Músico",
+    "description": "David es un músico mexicano y maestro experto en guitarra y teoría musical. Ofrece clases en línea de guitarra, piano, y teoría, composición y producción musical, desde completos principiantes hasta músicos ya avanzados de todas las edades. Su página muestra sus videos de YouTube, su experiencia como músico y maestro, y el contenido de sus clases.",
+    "architecture": "Este sitio web fue desarrollado con HTML5, JS (ES6), NextJS, ReactJS y TailwindCSS. Tiene integrado Google Analytics para monitorear el tráfico de usuarios, y un formulario de contacto para enviarle un correo a David usando Nodemailer, guardando la información en un SpreadSheet usando el API de Google."
   },
   "wobsgg": {
     "title": "WobsGG",
     "subtitle": "eCommerce de Controles",
-    "description": "WobsGG es un negocio dedicado a la modificación estética e interna de controles de Nintendo GameCube para Smash. Hecha con NextJS y Saleor, esta tienda online le permite a los clientes comprar el control perfecto para ellos, o pueden guardar su producto favorito o compartirlo con sus amigos. El admin tiene la libertad de administrar sus productos, órdenes, y más, a través de un dashboard personal.",
-    "architecture": "Este proyecto aún está en desarrollo, pero el frontend siendo desarrollado con NextJS, TypeScript, MUI, y GraphQL, mientras que el backend será Saleor con PostgreSQL y GraphQL."
+    "description": "WobsGG es un negocio dedicado a la modificación estética e interna de controles de Nintendo GameCube para jugadores competitivos Smash. Sus controles son de alta calidad y hace diseños personalizados y los modifica internamente para mejorar su desempeño, tiempo de vida, y consistencia.",
+    "architecture": "Este proyecto consiste de múltiples microservicios en Digital Ocean usando Docker Compose.<br/><br/>El frontend está desarrollado con HTML5, JS (ES6), NextJS, TypeScript, TailwindCSS, y GraphQL<br/><br/>El backend es Saleor, una app en Django open-source conectada a una base de datos de PostgreSQL, con una API de GraphQL.<br/><br/>El sitio web tiene un carrito de compras, formulario de contacto, monitoreo del estado de órdenes, y checkout usando Stripe, y el admin es capaz de administrar sus productos, órdenes, clientes, y más data a través de un dashboard privado.<br/><br/>Otros microservicios en uso son Traefik como proxy para asegurar el servidor web, Umami para analytics, Glitchtip como herramienta de monitoreo de errores, Redis para caching y session storage."
   },
   "auth-passport-jwt": {
     "title": "JWT Auth",
     "subtitle": "Autenticación Segura (JWT)",
-    "description": "Aplicación fullstack ejemplificando cómo agregar autenticación JWT segura con sesión persistente a una app de ReactJS con un servidor de NodeJS usando ExpressJS.",
-    "architecture": "El frontend de esta aplicación está hecho con ReactJS, manejando el estado de la app con Redux y LocalStorage para mantener una sesión persistente. En el diseño utilicé Tailwind CSS para experimentar con la simplicidad y consistencia de su sistema de diseño.<br/><br/>El backend es un servidor de ExpressJS en NodeJS actuando como API usando GraphQL, permitiendo al frontend registrar usuarios a una base de datos de MongoDB usando Passport y JWT para mantener una autenticación segura."
+    "description": "Aplicación fullstack ejemplificando cómo usuarios pueden registrarse e iniciar sesión seguramente, y solicitar reinicio de password, asegurada por autenticación JWT con sesión persistente.<br/><br/>El usuario/password es admin/admin.",
+    "architecture": "El frontend de esta aplicación está hecho con ReactJS, TailwindCSS, Redux y LocalStorage para mantener una sesión persistente.<br/><br/>El backend es un servidor de ExpressJS en NodeJS actuando como API usando GraphQL en una base de datos de MongoDB, asegurando la data con Passport y JWT para mantener una autenticación segura."
   },
   "ip-address-tracker": {
     "title": "Buscador de IP",
     "subtitle": "Ubicación e Info de un IP",
-    "description": "Este proyecto es un ejercicio de Frontend Mentor para poner a prueba el uso de Mapas con Leaflet y APIs.",
-    "architecture": "Esta app web fue desarrollada con ReactJS y CSS3, consumiendo un API pública para mostrar la información sobre una IP, incluyendo sus coordenadas geográficas, las cuales son usadas por Leaflet para mostrar la ubicación del IP en un mapa."
+    "description": "Este proyecto es un ejercicio de Frontend Mentor para poner a prueba el uso de Mapas con Leaflet y la info de una IP.",
+    "architecture": "App web desarrollada con ReactJS y CSS3, consumiendo un API pública para mostrar la información sobre la IP solicitada, incluyendo sus coordenadas geográficas, las cuales son usadas por Leaflet para mostrar la ubicación del IP en un mapa."
   },
   "omarbr": {
     "title": "OmarBR",
-    "subtitle": "Mi Portafolio",
-    "description": "¡Éste es el sitio que estás visitando! Es mi portafolio en donde mostraré mis proyectos, escribiré sobre mi carrera, y quizá comience un blog algún día.",
+    "subtitle": "¡Este sitio web!",
+    "description": "Mi portafolio personal. :) Aquí muestro mis proyectos, escribo sobre mi experiencia y carrera, e incluyo un formulario de contacto por si deseas contratarme o chatear conmigo.",
     "architecture": "Desarrollado con NextJS, ReactJS, TypeScript y CSS3, este sitio es multi-lenguaje, es amigable con el SEO, y tiene Google Analytics integrado."
   }
 }
