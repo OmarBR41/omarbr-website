@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import { faCircleQuestion, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -54,7 +54,10 @@ const ProjectIcons = ({ id, url, repoUrl, internalUrl }: ProjectIconsProps) => {
     <div className={styles.icons}>
       {internalUrl && (
         <Link href={internalUrl} onClick={() => onIconClick('internalUrl')}>
-          <FontAwesomeIcon icon={faCircleQuestion} />
+          <div className={styles.info}>
+            <FontAwesomeIcon icon={faCircle} />
+            <div className={styles.infoIcon}>i</div>
+          </div>
         </Link>
       )}
 
