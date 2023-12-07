@@ -37,10 +37,6 @@ export const FOOTER_NAV_RIGHT = [
     id: 'terms',
   },
   {
-    href: '/cookies-notice',
-    id: 'cookies',
-  },
-  {
     href: '/sitemap.xml',
     id: 'sitemap',
   },

@@ -8,7 +8,6 @@
     "contact-form": "Contáctame",
     "projects": "Proyectos",
     "privacy": "Política de Privacidad",
-    "cookies": "Aviso de Cookies",
     "terms": "Términos de Uso",
     "sitemap": "Mapa del Sitio"
   },
@@ -25,7 +24,6 @@
   },
 
   "misc": {
-    "cookies": "Este sitio web usa cookies para mejorar la experiencia del usuario.",
     "go-back": "Regresar",
     "architecture": "Arquitectura",
     "description": "Descripción",

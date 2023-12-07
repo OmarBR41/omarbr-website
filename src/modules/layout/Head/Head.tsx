@@ -5,7 +5,7 @@ import NextHead from 'next/head';
 
 import { DefaultSeo } from 'next-seo';
 
-import { GAScripts, ogImage, type OgImageProps } from '@/components/seo';
+import { ogImage, type OgImageProps } from '@/components/seo';
 import seoConfigJson from '@/config/seo.json';
 
 interface SEOProps {
@@ -28,9 +28,6 @@ export const Head: React.FC<SEOProps> = ({ title, description, openGraph, robots
   <>
     <DefaultSeo {...seoConfigJson} />
     <NextHead>
-      {/* Google Analytics */}
-      <GAScripts />
-
       {/* Title */}
       <title key="title">{title ? `${seoConfigJson.titleTemplate.replace(/%s/g, title)}` : seoConfigJson.title}</title>
       {/* Description */}

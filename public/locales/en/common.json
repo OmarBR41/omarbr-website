@@ -8,7 +8,6 @@
     "contact-form": "Contact Form",
     "projects": "Projects",
     "privacy": "Privacy Policy",
-    "cookies": "Cookies Notice",
     "terms": "Terms of Use",
     "sitemap": "Sitemap"
   },
@@ -22,7 +21,6 @@
   },
 
   "misc": {
-    "cookies": "This website uses cookies to improve the user experience.",
     "go-back": "Go Back",
     "architecture": "Architecture",
     "description": "Description",
