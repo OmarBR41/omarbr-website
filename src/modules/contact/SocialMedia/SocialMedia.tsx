@@ -3,7 +3,7 @@ import React, { useCallback, useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
 
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import { SocialMediaIcon } from '@/components/ui/SocialMediaIcon';
@@ -22,7 +22,7 @@ interface SocialMediaIcon {
 const SOCIAL_MEDIAS: SocialMediaIcon[] = [
   {
     id: 'cv',
-    icon: faFilePdf,
+    icon: faFile,
     url: '/OmarBR_CV_(en).pdf',
   },
   {
@@ -85,6 +85,7 @@ export const SocialMedia = ({ eventCategory }: SocialMediaProps) => {
           url={replaceContentInsideParenthesis(url, language)}
           onClick={() => onIconClick(id)}
         />
+        <p className={styles.cvText}>CV</p>
       </div>
     ),
     [language]

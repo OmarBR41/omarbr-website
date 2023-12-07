@@ -28,7 +28,19 @@
 }
 
 .cvIcon {
+  position: relative;
   color: var(--red-bright);
+}
+
+.cvText {
+  position: absolute;
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {
