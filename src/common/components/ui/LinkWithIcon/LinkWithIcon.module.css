@@ -13,8 +13,9 @@
 
 .container > * {
   flex: 0;
+  color: inherit;
 }
 
 .container:hover {
-  color: var(--accent-9);
+  color: var(--accent-4);
 }
