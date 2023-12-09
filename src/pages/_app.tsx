@@ -28,8 +28,8 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   useEffect(() => {
     document.body.classList?.remove('loading');
-    initialLoadEvent(router.asPath);
     initialSetup();
+    initialLoadEvent(router.asPath);
   }, []);
 
   useEffect(() => {

@@ -7,6 +7,7 @@ import { DefaultSeo } from 'next-seo';
 
 import { ogImage, type OgImageProps } from '@/components/seo';
 import seoConfigJson from '@/config/seo.json';
+import { UmamiScript } from '@/components/seo/UmamiScript';
 
 interface SEOProps {
   title?: string;
@@ -28,6 +29,8 @@ export const Head: React.FC<SEOProps> = ({ title, description, openGraph, robots
   <>
     <DefaultSeo {...seoConfigJson} />
     <NextHead>
+      <UmamiScript />
+
       {/* Title */}
       <title key="title">{title ? `${seoConfigJson.titleTemplate.replace(/%s/g, title)}` : seoConfigJson.title}</title>
       {/* Description */}
