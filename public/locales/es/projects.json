@@ -20,7 +20,7 @@
   "auth-passport-jwt": {
     "title": "JWT Auth",
     "subtitle": "Autenticación Segura (JWT)",
-    "description": "Aplicación fullstack ejemplificando cómo usuarios pueden registrarse e iniciar sesión seguramente, y solicitar reinicio de password, asegurada por autenticación JWT con sesión persistente.<br/><br/>El usuario/password es admin/admin.",
+    "description": "Aplicación fullstack ejemplificando cómo usuarios pueden registrarse e iniciar sesión de manera segura por autenticación JWT con sesión persistente.",
     "architecture": "El frontend de esta aplicación está hecho con ReactJS, TailwindCSS, Redux y LocalStorage para mantener una sesión persistente.<br/><br/>El backend es un servidor de ExpressJS en NodeJS actuando como API usando GraphQL en una base de datos de MongoDB, asegurando la data con Passport y JWT para mantener una autenticación segura."
   },
   "ip-address-tracker": {
