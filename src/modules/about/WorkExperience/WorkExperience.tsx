@@ -41,7 +41,7 @@ export const WorkExperience = () => {
 
   const renderJobsTimeline = useCallback(
     () =>
-      WORK_EXPERIENCE.map(({ companyName, companyLogoUrl, jobTitle, startDate, endDate }) => (
+      WORK_EXPERIENCE.map(({ companyName, companyLogoUrl, jobTitle }) => (
         <div className={styles.timelineBlock} key={companyName}>
           <div className={styles.imageContainer} onClick={() => onLogoClick(companyName)}>
             <Image className={styles.image} src={companyLogoUrl} width={20} height={20} alt={`${companyName}'s logo`} />
@@ -50,7 +50,6 @@ export const WorkExperience = () => {
           <div className={styles.timelineContent} onClick={() => onCardClick(companyName)}>
             <div className={styles.headerContainer}>
               <h3 className={styles.companyName}>{companyName}</h3>
-              <p className={styles.dates}>{formatWorkDateRange(startDate, endDate)}</p>
             </div>
 
             <span className={styles.jobTitle}>{t(`jobs.${jobTitle}`)}</span>

@@ -44,6 +44,17 @@
   z-index: 5;
 }
 
+.timelineBlock:first-child .imageContainer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: var(--image-size);
+  width: var(--image-size);
+  height: 1.5rem;
+  background-color: var(--accent-2);
+  z-index: 1;
+}
+
 .timelineBlock:last-child:before {
   content: '';
   position: absolute;
@@ -56,6 +67,7 @@
 }
 
 .imageContainer {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,25 +163,6 @@
   }
 
   .timelineContainer {
-    --offset-percentage: 50%;
-    --offset: calc(var(--offset-percentage) - var(--image-size-halved));
-  }
-
-  .timelineContainer::before {
-    left: var(--offset-percentage);
-  }
-
-  .timelineBlock:nth-child(odd) {
-    margin-left: var(--offset);
-  }
-
-  .timelineBlock:nth-child(even) {
-    flex-direction: row-reverse;
-    margin-right: var(--offset);
-  }
-
-  .timelineBlock:last-child:before {
-    left: unset;
-    right: 0;
+    max-width: 928px;
   }
 }
