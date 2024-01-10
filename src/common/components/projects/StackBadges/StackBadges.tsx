@@ -17,7 +17,9 @@ export type Badge =
   | 'postgresql'
   | 'mongodb'
   | 'graphql'
-  | 'netlify';
+  | 'docker'
+  | 'netlify'
+  | 'digital-ocean';
 
 interface StackBadgesProps {
   id: string;
