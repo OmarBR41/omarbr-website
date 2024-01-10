@@ -6,7 +6,7 @@ const Copyright = () => {
   return (
     <div className={styles.container}>
       <p className={styles.icon}>&copy;</p>
-      <p className={styles.text}>2023 - Omar BR</p>
+      <p className={styles.text}>{new Date().getFullYear()} - Omar BR</p>
     </div>
   );
 };
