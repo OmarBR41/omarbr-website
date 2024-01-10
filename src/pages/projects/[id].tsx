@@ -15,7 +15,7 @@ interface ProjectPageProps {
 
 const ProjectPage = ({ id }: ProjectPageProps) => {
   const { t } = useTranslation('projects');
-  const PAGE_TITLE = t('title');
+  const PAGE_TITLE = t(`${id}.title`);
 
   return (
     <>
