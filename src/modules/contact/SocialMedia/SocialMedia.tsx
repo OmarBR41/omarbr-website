@@ -23,7 +23,7 @@ const SOCIAL_MEDIAS: SocialMediaIcon[] = [
   {
     id: 'cv',
     icon: faFile,
-    url: '/OmarBR_CV_(en).pdf',
+    url: '/OmarBR_CV_2024_ENG.pdf',
   },
   {
     id: 'linkedin',
