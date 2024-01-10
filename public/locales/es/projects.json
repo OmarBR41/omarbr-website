@@ -20,8 +20,8 @@
   "auth-passport-jwt": {
     "title": "Auth JWT",
     "subtitle": "Autenticación Segura (JWT)",
-    "description": "Aplicación fullstack ejemplificando cómo usuarios pueden registrarse e iniciar sesión de manera segura por autenticación JWT con sesión persistente.<br/><br/>Credenciales de prueba:<br/>- test@example.com<br/>- test1234",
-    "architecture": "El frontend de esta aplicación está hecho con ReactJS, TailwindCSS, Redux y LocalStorage para mantener una sesión persistente.<br/><br/>El backend es un servidor de ExpressJS en NodeJS actuando como API usando GraphQL en una base de datos de MongoDB, asegurando la data con Passport y JWT para mantener una autenticación segura."
+    "description": "Aplicación fullstack ejemplificando cómo usuarios pueden registrarse e iniciar sesión de manera segura por autenticación JWT con sesión persistente.",
+    "architecture": "El frontend de esta aplicación está hecho con ReactJS, TailwindCSS, Redux y LocalStorage para mantener una sesión persistente.<br/><br/>El backend es un servidor de ExpressJS en NodeJS actuando como API usando GraphQL en una base de datos de MongoDB, asegurando la data con Passport y JWT para mantener una autenticación segura.<br/><br/>Credenciales de prueba:<br/>- test@example.com<br/>- test1234"
   },
   "ip-address-tracker": {
     "title": "Buscador IP",
@@ -39,6 +39,6 @@
     "title": "GitHub Commit Activity Explorer",
     "subtitle": "Gráfica de Commits",
     "description": "Una webapp para buscar repositorios de GitHub usando su API, permitiendo al usuario guardarlas si tuvieron commits en el pasado año, comparando su actividad de commits semanal usando una gráfica, con estado persistente.",
-    "architecture": "ReactJS, CSS3, date-fns, ChartJS, y GitHub API"
+    "architecture": "ReactJS, CSS3, date-fns, Recharts, y GitHub API"
   }
 }

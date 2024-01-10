@@ -20,8 +20,8 @@
   "auth-passport-jwt": {
     "title": "JWT Authentication",
     "subtitle": "JWT Authentication",
-    "description": "An example fullstack app where users can register and log in securely using JWT authentication.<br/><br/>Test credentials:<br/>- test@example.com<br/>- test1234",
-    "architecture": "This app's frontend is built with ReactJS, TailwindCSS, Redux and LocalStorage to keep a persistent session.<br/><br/>The backend is an ExpressJS server on NodeJS exposing a GraphQL API on a MongoDB database, securing the data with Passport and JWT for a secure authentication."
+    "description": "An example fullstack app where users can register and log in securely using JWT authentication.",
+    "architecture": "This app's frontend is built with ReactJS, TailwindCSS, Redux and LocalStorage to keep a persistent session.<br/><br/>The backend is an ExpressJS server on NodeJS exposing a GraphQL API on a MongoDB database, securing the data with Passport and JWT for a secure authentication.<br/><br/>Test credentials:<br/>- test@example.com<br/>- test1234"
   },
   "ip-address-tracker": {
     "title": "IP Mapper",
@@ -39,6 +39,6 @@
     "title": "GitHub Commit Activity Explorer",
     "subtitle": "GH Commit Graph",
     "description": "A webapp to search GitHub repositories using its API, letting the user store them if they had commits in the past year, comparing their weekly commit activity in a graph, with a persistent state.",
-    "architecture": "ReactJS, CSS3, date-fns, ChartJS, and GitHub API"
+    "architecture": "ReactJS, CSS3, date-fns, Recharts, and GitHub API"
   }
 }
