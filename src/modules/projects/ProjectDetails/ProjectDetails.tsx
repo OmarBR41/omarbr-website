@@ -42,7 +42,9 @@ export const ProjectDetails = ({ id }: ProjectDetailsProps) => {
           {/* Description */}
           <div className={styles.textContainer}>
             <p className={styles.header}>{commonT('misc.description')}</p>
-            <p className={styles.text}>{projectsT(`${id}.description`)}</p>
+            <p className={styles.text}>
+              <Trans t={projectsT} i18nKey={`${id}.description`} />
+            </p>
           </div>
 
           {/* Architecture */}
