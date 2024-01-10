@@ -34,5 +34,11 @@
     "subtitle": "¡Este sitio web!",
     "description": "Mi portafolio personal. :) Aquí muestro mis proyectos, escribo sobre mi experiencia y carrera, e incluyo un formulario de contacto por si deseas contratarme o chatear conmigo.",
     "architecture": "Desarrollado con NextJS, ReactJS, TypeScript y CSS3, este sitio es multi-lenguaje, es amigable con el SEO, y tiene Google Analytics integrado."
+  },
+  "github-commit-activity-explorer": {
+    "title": "GitHub Commit Activity Explorer",
+    "subtitle": "Gráfica de Commits",
+    "description": "Una webapp para buscar repositorios de GitHub usando su API, permitiendo al usuario guardarlas si tuvieron commits en el pasado año, comparando su actividad de commits semanal usando una gráfica, con estado persistente.",
+    "architecture": "ReactJS, CSS3, date-fns, ChartJS, y GitHub API"
   }
 }

@@ -80,4 +80,10 @@ export const PROJECTS: Project[] = [
     url: 'https://ip-address-tracker-obr.netlify.app',
     repoUrl: 'https://github.com/OmarBR41/ip-address-tracker',
   },
+  {
+    id: 'github-commit-activity-explorer',
+    stack: ['react', 'javascript', 'html5', 'css3'],
+    url: 'https://gh-commit-activity-explorer.netlify.app',
+    repoUrl: 'https://github.com/OmarBR41/github-commit-activity-explorer',
+  },
 ];
