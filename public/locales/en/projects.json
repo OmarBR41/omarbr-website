@@ -7,7 +7,7 @@
 
   "david-camporredondo": {
     "title": "David Camporredondo",
-    "subtitle": "Musician Portfolio",
+    "subtitle": "Musician Teacher",
     "description": "David is a Mexican musician and teacher proficient in guitar and music theory. He offers online classes of guitar, piano, and music theory, composition and production, from total beginners to advanced musicians of all ages. His page showcases his YouTube videos, his experience as a musician and a teacher, and the content of his lessons.",
     "architecture": "This website was developed using HTML5, JS (ES6), NextJS, ReactJS, and TailwindCSS. It has Google Analytics integrated to monitor user traffic, and a contact form so users can contact David via email using Nodemailer, saving the information in a private Spreadsheet using Google's API."
   },
@@ -20,19 +20,19 @@
   "auth-passport-jwt": {
     "title": "JWT Authentication",
     "subtitle": "JWT Authentication",
-    "description": "An example fullstack app where users can register and log in securely using JWT authentication.",
-    "architecture": "This app's frontend is built with ReactJS, TailwindCSS, Redux and LocalStorage to keep a persistent session. The backend is an ExpressJS server on NodeJS exposing a GraphQL API on a MongoDB database, securing the data with Passport and JWT for a secure authentication."
+    "description": "An example fullstack app where users can register and log in securely using JWT authentication.<br/><br/>Test credentials:<br/>- test@example.com<br/>- test1234",
+    "architecture": "This app's frontend is built with ReactJS, TailwindCSS, Redux and LocalStorage to keep a persistent session.<br/><br/>The backend is an ExpressJS server on NodeJS exposing a GraphQL API on a MongoDB database, securing the data with Passport and JWT for a secure authentication."
   },
   "ip-address-tracker": {
-    "title": "IP Info & Location",
+    "title": "IP Mapper",
     "subtitle": "IP Info & Location",
     "description": "This project is a Frontend Mentor exercise designed to test the usage of Maps with Leaflet and IP data.",
     "architecture": "Web app developed with ReactJS and CSS3, consuming a public API to display information about the requested IP, including its geographic coordinates, which are then used by Leaflet to show the IP's location on a map."
   },
   "omarbr": {
     "title": "OmarBR",
-    "subtitle": "This Website!",
-    "description": "My personal portfolio. :) Here I display some of my projects, write about my experience & career, and include a contact form if you want to hire me or chat with me!",
+    "subtitle": "Portfolio",
+    "description": "My personal portfolio, were I display and write about my projects, experience & career.",
     "architecture": "Developed with NextJS, ReactJS, TypeScript, and CSS3, this site is multilingual, SEO-friendly, and integrated with Google Analytics."
   },
   "github-commit-activity-explorer": {

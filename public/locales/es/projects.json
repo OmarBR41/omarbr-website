@@ -7,7 +7,7 @@
 
   "david-camporredondo": {
     "title": "David Camporredondo",
-    "subtitle": "Portafolio de Músico",
+    "subtitle": "Maestro de Música",
     "description": "David es un músico mexicano y maestro experto en guitarra y teoría musical. Ofrece clases en línea de guitarra, piano, y teoría, composición y producción musical, desde completos principiantes hasta músicos ya avanzados de todas las edades. Su página muestra sus videos de YouTube, su experiencia como músico y maestro, y el contenido de sus clases.",
     "architecture": "Este sitio web fue desarrollado con HTML5, JS (ES6), NextJS, ReactJS y TailwindCSS. Tiene integrado Google Analytics para monitorear el tráfico de usuarios, y un formulario de contacto para enviarle un correo a David usando Nodemailer, guardando la información en un SpreadSheet usando el API de Google."
   },
@@ -18,21 +18,21 @@
     "architecture": "Este proyecto consiste de múltiples microservicios en Digital Ocean usando Docker Compose.<br/><br/>El frontend está desarrollado con HTML5, JS (ES6), NextJS, TypeScript, TailwindCSS, y GraphQL<br/><br/>El backend es Saleor, una app en Django open-source conectada a una base de datos de PostgreSQL, con una API de GraphQL.<br/><br/>El sitio web tiene un carrito de compras, formulario de contacto, monitoreo del estado de órdenes, y checkout usando Stripe, y el admin es capaz de administrar sus productos, órdenes, clientes, y más data a través de un dashboard privado.<br/><br/>Otros microservicios en uso son Traefik como proxy para asegurar el servidor web, Umami para analytics, Glitchtip como herramienta de monitoreo de errores, Redis para caching y session storage."
   },
   "auth-passport-jwt": {
-    "title": "JWT Auth",
+    "title": "Auth JWT",
     "subtitle": "Autenticación Segura (JWT)",
-    "description": "Aplicación fullstack ejemplificando cómo usuarios pueden registrarse e iniciar sesión de manera segura por autenticación JWT con sesión persistente.",
+    "description": "Aplicación fullstack ejemplificando cómo usuarios pueden registrarse e iniciar sesión de manera segura por autenticación JWT con sesión persistente.<br/><br/>Credenciales de prueba:<br/>- test@example.com<br/>- test1234",
     "architecture": "El frontend de esta aplicación está hecho con ReactJS, TailwindCSS, Redux y LocalStorage para mantener una sesión persistente.<br/><br/>El backend es un servidor de ExpressJS en NodeJS actuando como API usando GraphQL en una base de datos de MongoDB, asegurando la data con Passport y JWT para mantener una autenticación segura."
   },
   "ip-address-tracker": {
-    "title": "Buscador de IP",
+    "title": "Buscador IP",
     "subtitle": "Ubicación e Info de un IP",
     "description": "Este proyecto es un ejercicio de Frontend Mentor para poner a prueba el uso de Mapas con Leaflet y la info de una IP.",
     "architecture": "App web desarrollada con ReactJS y CSS3, consumiendo un API pública para mostrar la información sobre la IP solicitada, incluyendo sus coordenadas geográficas, las cuales son usadas por Leaflet para mostrar la ubicación del IP en un mapa."
   },
   "omarbr": {
     "title": "OmarBR",
-    "subtitle": "¡Este sitio web!",
-    "description": "Mi portafolio personal. :) Aquí muestro mis proyectos, escribo sobre mi experiencia y carrera, e incluyo un formulario de contacto por si deseas contratarme o chatear conmigo.",
+    "subtitle": "Portafolio",
+    "description": "Mi portafolio personal, donde muestro y escribo sobre mis proyectos, experiencia y carrera.",
     "architecture": "Desarrollado con NextJS, ReactJS, TypeScript y CSS3, este sitio es multi-lenguaje, es amigable con el SEO, y tiene Google Analytics integrado."
   },
   "github-commit-activity-explorer": {
